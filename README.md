@@ -46,7 +46,7 @@ What the numbers mean:
 * **WooCommerce Factur-X, 476 / 1,200 (39.7 %) schema-invalid.** Exactly the invoices that carry a rounding
   amount: `ram:RoundingAmount` is written after `ram:GrandTotalAmount` / `ram:TotalPrepaidAmount`, while the
   CII D16B schema expects it between `TaxTotalAmount` and `GrandTotalAmount`. The UBL output of the same orders
-  is valid. This has been reported to the plugin maintainers together with a suggested fix (issue link: TODO).
+  is valid. This has been reported to the plugin maintainers together with a suggested fix (issue link: TODO — add the wpovernight GitHub issue URL here once filed).
 * **Odoo 19 Factur-X (EXTENDED profile).** With `round_globally`, 32.7 % (B2B) / 42.7 % (B2C) fail CEN
   calculation rules (BR-CO-10 / BR-S-08). With either mode, 80.7 % of B2B invoices fail Peppol rule R120
   (line net amount = quantity × price ± line allowances). Odoo's UBL outputs pass everything we check.
@@ -137,6 +137,11 @@ rules (R001–R010, R020, CL006–CL008, …) are not reported. Locally: `bash v
 See [CONTRIBUTING.md](CONTRIBUTING.md). In short: write `generators/<name>/run.sh <corpus_dir> <out_dir>` that
 emits `<name>-<config>__<cart-id>.xml`, add a `.tar.xz` of the outputs under `invoices/`, re-run
 `scripts/run_matrix.sh`, and commit the updated `results/`.
+
+## Audit / contact
+
+Want your generator's output checked across all validators, or interested in ongoing monitoring?
+Contact: conformance@mail.grokbot.com (placeholder). Please send test or anonymised invoices only.
 
 ## License
 

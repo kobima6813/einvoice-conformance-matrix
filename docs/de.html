@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>E-Rechnungs-Konformitätsmatrix — eine Rechnung, vier Regelwerke</title>
+<meta name="description" content="Open, reproducible cross-validator checks for EN 16931 e-invoice generators (KoSIT/XRechnung, CEN, Peppol BIS 3, amount due vs. charged).">
+<style>
+body{font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1d2433;max-width:920px;margin:0 auto;padding:24px}
+h1{font-size:30px;line-height:1.2;margin:.2em 0}h2{margin-top:1.8em}.lead{font-size:18px;color:#3b4459}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{border:1px solid #d6dbe6;padding:6px 8px;text-align:left}th{background:#f2f4f8}
+td.n{text-align:right}.bad{background:#fdecec;font-weight:600}.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{border:1px solid #d6dbe6;border-radius:8px;padding:16px}.btn{display:inline-block;background:#1f5fbf;color:#fff;padding:9px 14px;border-radius:6px;text-decoration:none}
+.btn.alt{background:#fff;color:#1f5fbf;border:1px solid #1f5fbf}.small{font-size:13px;color:#5b6478}nav a{margin-right:12px}
+@media(max-width:640px){.cards{grid-template-columns:1fr}}
+</style></head><body>
+<nav class="small"><a href="./">English</a><a href="de.html">Deutsch</a><a href="https://github.com/kobima6813/einvoice-conformance-matrix">GitHub</a></nav>
+<h1>39,7 % der Factur-X-Rechnungen eines verbreiteten WooCommerce-Rechnungsplugins scheitern an der Schemavalidierung</h1>
+<p class="lead">Dieselben 600 synthetischen Shop-Bestellungen liefen durch WooCommerce, Odoo 19 und drei Bibliotheken; alle 7.800 Rechnungen wurden gegen KoSIT/XRechnung, CEN EN 16931, Peppol BIS 3.0.20 und den tatsächlich gezahlten Betrag geprüft. Die Regelwerke widersprechen sich oft.</p>
+<p><a class="btn" href="https://github.com/kobima6813/einvoice-conformance-matrix">Open-Source-Matrix &amp; GitHub Action</a></p>
+
+<h2>Ergebnisse</h2>
+<table>
+<tr><th>Generator / Konfiguration</th><th>Segment</th><th>KoSIT accept %</th><th>XSD invalid %</th><th>CEN calc fail %</th><th>Peppol R120 fail %</th><th>Zahlbetrag ≠ Bestellsumme %</th></tr>
+<tr><td>WooCommerce PDF Invoices 5.16.4 — Factur-X</td><td>B2B</td><td class="n">63,7</td><td class="n bad">36,3</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
+<tr><td>WooCommerce PDF Invoices 5.16.4 — Factur-X</td><td>B2C</td><td class="n">57,0</td><td class="n bad">43,0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
+<tr><td>WooCommerce PDF Invoices 5.16.4 — Peppol BIS 3</td><td>beide</td><td class="n">n/a</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
+<tr><td>Odoo 19 — Factur-X, round_globally</td><td>B2B</td><td class="n">n/a</td><td class="n">0</td><td class="n bad">32,7</td><td class="n bad">80,7</td><td class="n">2,0</td></tr>
+<tr><td>Odoo 19 — Factur-X, round_globally</td><td>B2C</td><td class="n">n/a</td><td class="n">0</td><td class="n bad">42,7</td><td class="n">0</td><td class="n">4,7</td></tr>
+<tr><td>Odoo 19 — Factur-X, round_per_line</td><td>B2B</td><td class="n">n/a</td><td class="n">0</td><td class="n">0</td><td class="n bad">80,7</td><td class="n">0</td></tr>
+<tr><td>Odoo 19 — Peppol BIS 3 / XRechnung</td><td>beide</td><td class="n">n/a / 100</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
+<tr><td>Mustang 2.26.0 — library-computed totals</td><td>B2B</td><td class="n">100</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n bad">90,7</td></tr>
+<tr><td>Mustang 2.26.0 — library-computed totals</td><td>B2C</td><td class="n">100</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n bad">66,7</td></tr>
+<tr><td>horstoeko/zugferd 1.0.132, drafthorse 2025.2.0 (reference totals)</td><td>beide</td><td class="n">100</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
+</table>
+<p class="small">Je Konfiguration 300 B2B- + 300 B2C-Warenkörbe (synthetisch; DE, 19 %/7 % USt., Gutscheine, Versand). „n/a“ = kein XRechnung-Szenario anwendbar (keine Ablehnung). Peppol-Regeln gelten nur für Peppol-BIS-Dokumente; die Befunde zeigen Widersprüche zwischen Regelwerken, keine rechtliche Ungültigkeit. Methode und Einschränkungen im Repository.</p>
+
+<h2>Rechnungen prüfen lassen</h2>
+<div class="cards">
+<div class="card"><h3>Einmalige Prüfung über alle Validatoren</h3><p>Schicken Sie uns Beispielrechnungen (UBL oder CII, anonymisiert oder Testdaten) und optional die gezahlten Beträge. Sie erhalten einen Bericht je Rechnung über KoSIT/XRechnung, CEN EN 16931, Peppol BIS 3 und Zahlbetrag vs. gezahlt.</p>
+<a class="btn" href="mailto:conformance@mail.grokbot.com?subject=Cross-validator%20check%20request&amp;body=Generator%2Fplatform%20and%20version%3A%0AFormats%20(UBL%2FCII%2C%20profile)%3A%0ANumber%20of%20sample%20invoices%3A%0A">Prüfung anfragen</a></div>
+<div class="card"><h3>Monatliches Monitoring — Warteliste</h3><p>Regelmäßige Prüfung Ihrer Ausgabe gegen neue Validator-Versionen und Regeländerungen, mit Benachrichtigung bei Fehlern. Noch nicht verfügbar; tragen Sie sich in die Warteliste ein.</p>
+<a class="btn alt" href="mailto:conformance@mail.grokbot.com?subject=Monitoring%20waitlist">Auf die Warteliste</a></div>
+</div>
+<p class="small">Bitte keine Rechnungen mit echten personenbezogenen Daten senden. Kostenlos selbst prüfen: die <a href="https://github.com/kobima6813/einvoice-conformance-matrix#use-the-github-action-on-your-own-invoices">GitHub Action</a> führt dieselben Prüfungen in Ihrer CI aus.</p>
+<hr><p class="small">Unabhängiges Open-Source-Projekt, nicht verbunden mit KoSIT, CEN, OpenPeppol, WooCommerce, WP Overnight, Odoo oder anderen genannten Anbietern. Ergebnisse gelten nur für die genannten Versionen. Code und Daten: Apache-2.0.</p>
+</body></html>
