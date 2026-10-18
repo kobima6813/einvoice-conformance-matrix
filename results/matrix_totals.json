@@ -1,0 +1,132 @@
+{
+ "drafthorse2025.2.0-en16931+ref-totals": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 0,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "horstoeko-zugferd1.0.132-en16931+ref-totals": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 0,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "mustang2.26.0-auto-totals-xrechnung": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 472,
+  "due_ne_sim": 472,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "odoo19-bis3-round_globally": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 22,
+  "kosit_accept": 0,
+  "kosit_nomatch": 600,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "odoo19-bis3-round_per_line": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 87,
+  "kosit_accept": 0,
+  "kosit_nomatch": 600,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "odoo19-fx-round_globally": {
+  "cen_calc_fail": 226,
+  "due_ne_order": 20,
+  "due_ne_sim": 40,
+  "kosit_accept": 0,
+  "kosit_nomatch": 600,
+  "n": 600,
+  "peppol_R120_fail": 242,
+  "xsd_invalid": 0
+ },
+ "odoo19-fx-round_per_line": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 87,
+  "kosit_accept": 0,
+  "kosit_nomatch": 600,
+  "n": 600,
+  "peppol_R120_fail": 242,
+  "xsd_invalid": 0
+ },
+ "odoo19-xr-round_globally": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 22,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "odoo19-xr-round_per_line": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 87,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "wcpdf5164-bis3-rsno": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 34,
+  "kosit_accept": 0,
+  "kosit_nomatch": 600,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "wcpdf5164-bis3-rsyes": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 34,
+  "kosit_accept": 0,
+  "kosit_nomatch": 600,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "wcpdf5164-fx-rsno": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 34,
+  "kosit_accept": 362,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 238
+ },
+ "wcpdf5164-fx-rsyes": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 34,
+  "kosit_accept": 362,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 238
+ }
+}

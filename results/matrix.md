@@ -1,0 +1,28 @@
+| generator / config | seg | n | KoSIT accept % | no KoSIT scenario % | XSD invalid % | CEN calc fail % | Peppol R120 fail % | due ≠ order total % | due ≠ simulated charge % |
+|---|---|---|---|---|---|---|---|---|---|
+| drafthorse2025.2.0-en16931+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| drafthorse2025.2.0-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| horstoeko-zugferd1.0.132-en16931+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| horstoeko-zugferd1.0.132-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| mustang2.26.0-auto-totals-xrechnung | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 90.7 | 90.7 |
+| mustang2.26.0-auto-totals-xrechnung | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
+| odoo19-bis3-round_globally | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 6.0 |
+| odoo19-bis3-round_globally | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.3 |
+| odoo19-bis3-round_per_line | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 13.7 |
+| odoo19-bis3-round_per_line | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 15.3 |
+| odoo19-fx-round_globally | b2b | 300 | 0.0 | 100.0 | 0.0 | 32.7 | 80.7 | 2.0 | 8.0 |
+| odoo19-fx-round_globally | b2c | 300 | 0.0 | 100.0 | 0.0 | 42.7 | 0.0 | 4.7 | 5.3 |
+| odoo19-fx-round_per_line | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 80.7 | 0.0 | 13.7 |
+| odoo19-fx-round_per_line | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 15.3 |
+| odoo19-xr-round_globally | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 6.0 |
+| odoo19-xr-round_globally | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.3 |
+| odoo19-xr-round_per_line | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 13.7 |
+| odoo19-xr-round_per_line | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 15.3 |
+| wcpdf5164-bis3-rsno | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 8.7 |
+| wcpdf5164-bis3-rsno | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 2.7 |
+| wcpdf5164-bis3-rsyes | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 8.7 |
+| wcpdf5164-bis3-rsyes | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 2.7 |
+| wcpdf5164-fx-rsno | b2b | 300 | 63.7 | 0.0 | 36.3 | 0.0 | 0.0 | 0.0 | 8.7 |
+| wcpdf5164-fx-rsno | b2c | 300 | 57.0 | 0.0 | 43.0 | 0.0 | 0.0 | 0.0 | 2.7 |
+| wcpdf5164-fx-rsyes | b2b | 300 | 63.7 | 0.0 | 36.3 | 0.0 | 0.0 | 0.0 | 8.7 |
+| wcpdf5164-fx-rsyes | b2c | 300 | 57.0 | 0.0 | 43.0 | 0.0 | 0.0 | 0.0 | 2.7 |

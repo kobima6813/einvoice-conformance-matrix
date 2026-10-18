@@ -1,0 +1,30 @@
+name: e-invoice conformance check
+description: >-
+  Validate generated EN 16931 invoices (UBL / CII) against KoSIT XRechnung, the CEN EN 16931 schematron,
+  Peppol BIS 3.0.20 and exact arithmetic, and optionally compare the amount due with the amount charged.
+branding: {icon: check-square, color: blue}
+inputs:
+  invoices:
+    description: Directory containing the *.xml invoices to check (searched recursively).
+    required: true
+  expected:
+    description: 'Optional JSON file {"<file name without .xml>" | "<id>": "<charged amount>"}.'
+    required: false
+    default: ''
+  fail-on:
+    description: "'any' (default), 'none' (report only) or a comma list of rule ids, e.g. XSD,BR-CO-15,PEPPOL-EN16931-R120,DUE-NE-CHARGED"
+    required: false
+    default: any
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-java@v4
+      with: {distribution: temurin, java-version: '21'}
+    - uses: actions/cache@v4
+      with:
+        path: ${{ github.action_path }}/.tools
+        key: eicm-tools-${{ hashFiles(format('{0}/validators/pins.txt', github.action_path)) }}
+    - shell: bash
+      run: bash "${{ github.action_path }}/validators/fetch_pinned.sh"
+    - shell: bash
+      run: bash "${{ github.action_path }}/validators/ci_check.sh" "${{ inputs.invoices }}" "${{ inputs.expected }}" "${{ inputs.fail-on }}"

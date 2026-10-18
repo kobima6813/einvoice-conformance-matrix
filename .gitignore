@@ -1,0 +1,10 @@
+.tools/
+work/
+out/
+generators/*/.venv/
+generators/*/vendor/
+generators/*/composer.lock
+generators/*/build/
+generators/*/.site/
+__pycache__/
+*.pyc
