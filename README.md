@@ -46,7 +46,7 @@ What the numbers mean:
 * **WooCommerce Factur-X, 476 / 1,200 (39.7 %) schema-invalid.** Exactly the invoices that carry a rounding
   amount: `ram:RoundingAmount` is written after `ram:GrandTotalAmount` / `ram:TotalPrepaidAmount`, while the
   CII D16B schema expects it between `TaxTotalAmount` and `GrandTotalAmount`. The UBL output of the same orders
-  is valid. This has been reported to the plugin maintainers together with a suggested fix (issue link: TODO — add the wpovernight GitHub issue URL here once filed).
+  is valid. This has been reported to the plugin maintainers together with a suggested fix ([wpovernight issue #1662](https://github.com/wpovernight/woocommerce-pdf-invoices-packing-slips/issues/1662)).
 * **Odoo 19 Factur-X (EXTENDED profile).** With `round_globally`, 32.7 % (B2B) / 42.7 % (B2C) fail CEN
   calculation rules (BR-CO-10 / BR-S-08). With either mode, 80.7 % of B2B invoices fail Peppol rule R120
   (line net amount = quantity × price ± line allowances). Odoo's UBL outputs pass everything we check.
