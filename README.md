@@ -58,6 +58,16 @@ What the numbers mean:
 * **horstoeko/zugferd and drafthorse** do not compute totals; given correct reference totals (with BT-114
   rounding amount) they produce invoices that pass all checks. The arithmetic is the integrator's job.
 
+## Upstream reports
+
+Bugs found while building the matrix, reported to the maintainers with a repro and a suggested fix.
+
+| Project | Finding | Report | Status |
+|---|---|---|---|
+| WooCommerce PDF Invoices & Packing Slips 5.16.4 | Factur-X: `ram:RoundingAmount` out of XSD order | [#1662](https://github.com/wpovernight/woocommerce-pdf-invoices-packing-slips/issues/1662) | Open |
+| josemmo/einvoicing 0.3.1 | BT-106 ≠ Σ written BT-131 (BR-CO-10) | [#93](https://github.com/josemmo/einvoicing/issues/93) | Open |
+| speedata/einvoice (≤ v0.0.20) | UBL writer: XSD element order (AllowanceCharge, LegalMonetaryTotal); BT-27/BT-28 swapped (BR-06/BR-07) | [#185](https://github.com/speedata/einvoice/issues/185) | **Fixed in main ([PR #186](https://github.com/speedata/einvoice/pull/186)), not yet released.** The maintainer also fixed related issues #187–#190. |
+
 ## Method
 
 1. `corpus/build_corpus.py` deterministically generates 300 B2B (seed 43) and 300 B2C (seed 42) carts:
