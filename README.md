@@ -66,7 +66,9 @@ Bugs found while building the matrix, reported to the maintainers with a repro a
 |---|---|---|---|
 | WooCommerce PDF Invoices & Packing Slips 5.16.4 | Factur-X: `ram:RoundingAmount` out of XSD order | [#1662](https://github.com/wpovernight/woocommerce-pdf-invoices-packing-slips/issues/1662) | Open |
 | josemmo/einvoicing 0.3.1 | BT-106 ≠ Σ written BT-131 (BR-CO-10) | [#93](https://github.com/josemmo/einvoicing/issues/93) | Open |
-| speedata/einvoice (≤ v0.0.20) | UBL writer: XSD element order (AllowanceCharge, LegalMonetaryTotal); BT-27/BT-28 swapped (BR-06/BR-07) | [#185](https://github.com/speedata/einvoice/issues/185) | **Fixed in main ([PR #186](https://github.com/speedata/einvoice/pull/186)), not yet released.** The maintainer also fixed related issues #187–#190. |
+| speedata/einvoice (≤ v0.0.20) | UBL writer: XSD element order (AllowanceCharge, LegalMonetaryTotal); BT-27/BT-28 swapped (BR-06/BR-07) | [#185](https://github.com/speedata/einvoice/issues/185) | **Fixed ([PR #186](https://github.com/speedata/einvoice/pull/186)), released in [v0.0.23](https://github.com/speedata/einvoice/releases/tag/v0.0.23); re-tested: 9/9 UBL repro invoices KoSIT-acceptable.** The maintainer also fixed related issues #187–#190. |
+| Mustang 2.26.0 | Library-computed totals vs. charged amount | [#1316](https://github.com/ZUGFeRD/mustangproject/issues/1316) | Fixed on master ([PR #1318](https://github.com/ZUGFeRD/mustangproject/pull/1318)), unreleased |
+| horstoeko/zugferd 1.0.132 | Exempt/other VAT categories: broken sprintf / missing VAT-table entry | [#390](https://github.com/horstoeko/zugferd/issues/390) | Fixed on main ([7ae8164](https://github.com/horstoeko/zugferd/commit/7ae8164)), release pending |
 
 ## Method
 
