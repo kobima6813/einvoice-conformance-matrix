@@ -1,5 +1,18 @@
 # einvoice-conformance-matrix
 
+**Find out whether your XRechnung / ZUGFeRD / Peppol invoices actually pass KoSIT, EN 16931 and Peppol, in one CI step.**
+
+[![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
+[![Invoices tested](https://img.shields.io/badge/invoices%20tested-7%2C800-informational)](#headline-matrix-7800-invoices)
+[![Live matrix](https://img.shields.io/badge/live-matrix-1f5fbf)](https://kobima6813.github.io/einvoice-conformance-matrix/)
+[![GitHub stars](https://img.shields.io/github/stars/kobima6813/einvoice-conformance-matrix?style=social)](https://github.com/kobima6813/einvoice-conformance-matrix/stargazers)
+
+![Headline results from the live matrix page](docs/img/matrix.png)
+
+**Quick start:** add `- uses: kobima6813/einvoice-conformance-matrix@main` with `invoices: <dir of *.xml>` to a workflow ([details](#use-the-github-action-on-your-own-invoices)).
+
+**Why:** the official validators disagree with each other more often than you'd expect, and an invoice that "looks fine" can still be rejected. This repo runs the same synthetic orders through real generators and checks every invoice against all rule sets at once, so you see the disagreements before your customers do. Bugs found this way were reported upstream and fixed in released versions (see [Upstream reports](#upstream-reports)).
+
 A reproducible, cross-validator conformance matrix for EN 16931 e-invoice generators
 (shop/ERP plugins and libraries), plus a GitHub Action that runs the same checks on your own
 generated invoices.
@@ -133,7 +146,7 @@ and `generators/odoo/run.sh` document the exact pinned versions and steps. They 
 ```yaml
 - uses: actions/checkout@v4
 - run: ./make-test-invoices.sh out/invoices          # your generator
-- uses: kobima6813/einvoice-conformance-matrix@v1
+- uses: kobima6813/einvoice-conformance-matrix@main
   with:
     invoices: out/invoices                          # directory with *.xml (UBL or CII)
     expected: out/charged.json                      # optional {"<file name without .xml>": "123.45"}
@@ -159,3 +172,7 @@ Contact: conformance@mail.grokbot.com (placeholder). Please send test or anonymi
 
 Code, corpus and results: [Apache License 2.0](LICENSE). Third-party validators and generators are fetched
 at runtime under their own licenses; see [THIRD_PARTY.md](THIRD_PARTY.md).
+
+---
+
+If this saved you a debugging session, a ⭐ helps others find it.
