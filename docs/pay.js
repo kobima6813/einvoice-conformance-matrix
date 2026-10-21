@@ -1,0 +1,1 @@
+(function(){var c=window.EICM_PAY||{};document.querySelectorAll('a[data-pay]').forEach(function(a){var u=c[a.getAttribute('data-pay')];if(u&&/^https:\/\/(www\.)?(paypal\.me|paypal\.com)\//.test(u)){a.href=u;a.rel='noopener';a.target='_blank';a.style.display='';}});})();
