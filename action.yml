@@ -18,13 +18,17 @@ inputs:
 runs:
   using: composite
   steps:
-    - uses: actions/setup-java@v4
+    - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3 # v4
       with: {distribution: temurin, java-version: '21'}
-    - uses: actions/cache@v4
+    - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
       with:
         path: ${{ github.action_path }}/.tools
         key: eicm-tools-${{ hashFiles(format('{0}/validators/pins.txt', github.action_path)) }}
     - shell: bash
       run: bash "${{ github.action_path }}/validators/fetch_pinned.sh"
     - shell: bash
-      run: bash "${{ github.action_path }}/validators/ci_check.sh" "${{ inputs.invoices }}" "${{ inputs.expected }}" "${{ inputs.fail-on }}"
+      env:
+        EICM_INVOICES: ${{ inputs.invoices }}
+        EICM_EXPECTED: ${{ inputs.expected }}
+        EICM_FAIL_ON: ${{ inputs.fail-on }}
+      run: bash "${{ github.action_path }}/validators/ci_check.sh" "$EICM_INVOICES" "$EICM_EXPECTED" "$EICM_FAIL_ON"
