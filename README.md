@@ -35,7 +35,7 @@ All validator artefacts are downloaded at runtime from their official sources an
 | Odoo 19.0, Factur-X, `round_per_line` | b2c | n/a | 100 | 0 | 0 | 0 | 0 |
 | Mustang 2.26.0, totals computed by the library (XRechnung) | b2b | 100 | 0 | 0 | 0 | 0 | **90.7** |
 | Mustang 2.26.0, totals computed by the library (XRechnung) | b2c | 100 | 0 | 0 | 0 | 0 | **66.7** |
-| horstoeko/zugferd 1.0.132, reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
+| horstoeko/zugferd 1.0.133, reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 | drafthorse 2025.2.0, reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 
 Full per-configuration table: [`results/matrix.md`](results/matrix.md) / [`results/matrix.csv`](results/matrix.csv).
@@ -68,7 +68,7 @@ Bugs found while building the matrix, reported to the maintainers with a repro a
 | josemmo/einvoicing 0.3.1 | BT-106 ≠ Σ written BT-131 (BR-CO-10) | [#93](https://github.com/josemmo/einvoicing/issues/93) | Open |
 | speedata/einvoice (≤ v0.0.20) | UBL writer: XSD element order (AllowanceCharge, LegalMonetaryTotal); BT-27/BT-28 swapped (BR-06/BR-07) | [#185](https://github.com/speedata/einvoice/issues/185) | **Fixed ([PR #186](https://github.com/speedata/einvoice/pull/186)), released in [v0.0.23](https://github.com/speedata/einvoice/releases/tag/v0.0.23); re-tested: 9/9 UBL repro invoices KoSIT-acceptable.** The maintainer also fixed related issues #187–#190. |
 | Mustang 2.26.0 | Library-computed totals vs. charged amount | [#1316](https://github.com/ZUGFeRD/mustangproject/issues/1316) | Fixed on master ([PR #1318](https://github.com/ZUGFeRD/mustangproject/pull/1318)), unreleased |
-| horstoeko/zugferd 1.0.132 | Exempt/other VAT categories: broken sprintf / missing VAT-table entry | [#390](https://github.com/horstoeko/zugferd/issues/390) | Fixed on main ([7ae8164](https://github.com/horstoeko/zugferd/commit/7ae8164)), release pending |
+| horstoeko/zugferd 1.0.132 | Exempt/other VAT categories: broken sprintf / missing VAT-table entry | [#390](https://github.com/horstoeko/zugferd/issues/390) | Released in [v1.0.133](https://github.com/horstoeko/zugferd/releases/tag/v1.0.133) ([7ae8164](https://github.com/horstoeko/zugferd/commit/7ae8164)); re-tested: E/AE/K/G/O exemption reasons KoSIT-acceptable |
 
 ## Method
 
