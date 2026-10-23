@@ -4,6 +4,10 @@
 | drafthorse2025.2.0-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | horstoeko-zugferd1.0.132-en16931+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | horstoeko-zugferd1.0.132-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| josemmo0.3.1-xrechnung-default | b2b | 300 | 1.7 | 0.0 | 0.0 | 98.0 | 0.0 | 99.7 | 99.7 |
+| josemmo0.3.1-xrechnung-default | b2c | 300 | 0.7 | 0.0 | 0.0 | 98.7 | 0.0 | 99.3 | 99.3 |
+| josemmo0.3.1-xrechnung-round2 | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 90.7 | 90.7 |
+| josemmo0.3.1-xrechnung-round2 | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
 | mustang2.26.0-auto-totals-xrechnung | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 90.7 | 90.7 |
 | mustang2.26.0-auto-totals-xrechnung | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
 | odoo19-bis3-round_globally | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 6.0 |

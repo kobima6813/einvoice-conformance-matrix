@@ -19,6 +19,26 @@
   "peppol_R120_fail": 0,
   "xsd_invalid": 0
  },
+ "josemmo0.3.1-xrechnung-default": {
+  "cen_calc_fail": 590,
+  "due_ne_order": 597,
+  "due_ne_sim": 597,
+  "kosit_accept": 7,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "josemmo0.3.1-xrechnung-round2": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 472,
+  "due_ne_sim": 472,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
  "mustang2.26.0-auto-totals-xrechnung": {
   "cen_calc_fail": 0,
   "due_ne_order": 472,

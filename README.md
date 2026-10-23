@@ -3,7 +3,7 @@
 **Find out whether your XRechnung / ZUGFeRD / Peppol invoices actually pass KoSIT, EN 16931 and Peppol, in one CI step.**
 
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Invoices tested](https://img.shields.io/badge/invoices%20tested-7%2C800-informational)](#headline-matrix-7800-invoices)
+[![Invoices tested](https://img.shields.io/badge/invoices%20tested-9%2C000-informational)](#headline-matrix-9000-invoices)
 [![Live matrix](https://img.shields.io/badge/live-matrix-1f5fbf)](https://kobima6813.github.io/einvoice-conformance-matrix/)
 [![GitHub stars](https://img.shields.io/github/stars/kobima6813/einvoice-conformance-matrix?style=social)](https://github.com/kobima6813/einvoice-conformance-matrix/stargazers)
 
@@ -31,7 +31,7 @@ All validator artefacts are downloaded at runtime from their official sources an
 > The corpus is **synthetic**: 600 generated tax-inclusive carts. No real orders, customers or personal data
 > are included. All names, addresses, VAT IDs and IBANs in the invoices are placeholder/test values.
 
-## Headline matrix (7,800 invoices)
+## Headline matrix (9,000 invoices)
 
 300 B2B + 300 B2C carts per generator configuration (German VAT 19 % / 7 %, percentage coupons, shipping).
 
@@ -50,6 +50,9 @@ All validator artefacts are downloaded at runtime from their official sources an
 | Mustang 2.26.0, totals computed by the library (XRechnung) | b2c | 100 | 0 | 0 | 0 | 0 | **66.7** |
 | horstoeko/zugferd 1.0.133, reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 | drafthorse 2025.2.0, reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
+| josemmo/einvoicing 0.3.1, totals computed by the library, rounding matrix 2 dp (XRechnung UBL) | b2b | 100 | 0 | 0 | 0 | 0 | **90.7** |
+| josemmo/einvoicing 0.3.1, totals computed by the library, rounding matrix 2 dp (XRechnung UBL) | b2c | 100 | 0 | 0 | 0 | 0 | **66.7** |
+| josemmo/einvoicing 0.3.1, library default rounding (no preset) | b2b / b2c | 0.7–1.7 | 0 | 0 | **98.0–98.7** | 0 | **99.3–99.7** |
 
 Full per-configuration table: [`results/matrix.md`](results/matrix.md) / [`results/matrix.csv`](results/matrix.csv).
 WooCommerce rows are identical for both "round tax at subtotal" settings; Odoo rows cover both tax rounding modes.
@@ -68,8 +71,29 @@ What the numbers mean:
   line prices, the amount due differs from what the shop charged in 90.7 % (B2B) / 66.7 % (B2C) of orders
   (usually by 1–5 cents, at most €0.81 in this corpus). This reflects the tax-inclusive-shop vs. EN 16931 net-calculation gap, not a defect in
   the library's EN 16931 arithmetic.
+* **josemmo/einvoicing 0.3.1** (added 23 Oct 2026) computes totals from net line prices. With `setRoundingMatrix(['' => 2])`
+  every invoice is KoSIT-acceptable and matches the CEN rules, and the amount due differs from the shop charge exactly as with Mustang
+  (90.7 % / 66.7 %; same tax-inclusive vs. net gap). With no preset and no rounding matrix, the library writes amounts with up to
+  8 decimals (e.g. `PayableAmount 46.1125`), so 98–99 % fail BR-DEC-* / BR-CO-14/15. This is a configuration default rather than a
+  new bug (earlier discussion: [#29](https://github.com/josemmo/einvoicing/issues/29)); set a preset or a rounding matrix.
 * **horstoeko/zugferd and drafthorse** do not compute totals; given correct reference totals (with BT-114
   rounding amount) they produce invoices that pass all checks. The arithmetic is the integrator's job.
+
+## Get your library listed
+
+Maintain an e-invoice generator (library, ERP, shop plugin)? Getting a row in the matrix is free:
+
+1. Open a PR adding `generators/<name>/run.sh` that turns the shared corpus into invoices (see [CONTRIBUTING.md](CONTRIBUTING.md)), **or**
+2. open an issue titled `Listing request: <project>` with the package/version and a minimal code sample, and we will write the driver.
+
+Every listed generator is re-run against pinned KoSIT/XRechnung, CEN EN 16931 and Peppol BIS 3 rules, and findings are sent to
+you before they are highlighted. You can add this badge to your README once listed:
+
+```markdown
+[![EN 16931 conformance matrix](https://img.shields.io/badge/EN%2016931-tested%20in%20conformance%20matrix-1f5fbf)](https://kobima6813.github.io/einvoice-conformance-matrix/)
+```
+
+[![EN 16931 conformance matrix](https://img.shields.io/badge/EN%2016931-tested%20in%20conformance%20matrix-1f5fbf)](https://kobima6813.github.io/einvoice-conformance-matrix/)
 
 ## Upstream reports
 

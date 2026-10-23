@@ -19,6 +19,16 @@ Thanks for helping. Corrections from generator maintainers are especially welcom
 6. If the generator can run on a stock Ubuntu runner, add it to the `regenerate` job in
    `.github/workflows/conformance.yml`.
 
+## For vendors and maintainers: getting listed
+
+* Free and neutral: any open-source or commercially available EN 16931 generator can be listed.
+* Easiest path: open an issue `Listing request: <project>` with the version, the output format (XRechnung UBL/CII,
+  ZUGFeRD/Factur-X profile, Peppol BIS 3) and a minimal example of how amounts are set. We will write the driver.
+* Or open a PR following "Adding a generator" above. Please pin the version; we re-test on new releases on request.
+* We contact maintainers with reproducible examples before highlighting a failure, and configuration issues
+  (e.g. a non-default setting) are labelled as such, never as bugs.
+* Fixed in a release? Open an issue with the version; we re-run and update the "Upstream reports" table.
+
 ## Reporting a wrong result
 
 Open an issue with the invoice file name, the rule id and why you think the finding is wrong. Please be

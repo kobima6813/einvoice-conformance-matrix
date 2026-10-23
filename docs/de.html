@@ -1,7 +1,9 @@
 <!doctype html>
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>E-Rechnungs-Konformitätsmatrix — eine Rechnung, vier Regelwerke</title>
-<meta name="description" content="Open, reproducible cross-validator checks for EN 16931 e-invoice generators (KoSIT/XRechnung, CEN, Peppol BIS 3, amount due vs. charged).">
+<title>E-Rechnung Konformitätsmatrix: XRechnung, ZUGFeRD, Factur-X, Peppol im Test</title>
+<meta name="description" content="Unabhängiger, reproduzierbarer Test von Open-Source-E-Rechnungs-Generatoren (Odoo, WooCommerce, Mustang u. a.) gegen KoSIT/XRechnung-, EN-16931- und Peppol-Regeln.">
+<link rel="canonical" href="https://kobima6813.github.io/einvoice-conformance-matrix/de.html"><link rel="alternate" hreflang="en" href="https://kobima6813.github.io/einvoice-conformance-matrix/"><link rel="alternate" hreflang="de" href="https://kobima6813.github.io/einvoice-conformance-matrix/de.html">
+<meta property="og:type" content="website"><meta property="og:url" content="https://kobima6813.github.io/einvoice-conformance-matrix/de.html"><meta property="og:title" content="E-Rechnung Konformitätsmatrix: XRechnung, ZUGFeRD, Factur-X, Peppol im Test"><meta property="og:description" content="Unabhängiger, reproduzierbarer Test von Open-Source-E-Rechnungs-Generatoren (Odoo, WooCommerce, Mustang u. a.) gegen KoSIT/XRechnung-, EN-16931- und Peppol-Regeln."><meta property="og:image" content="https://raw.githubusercontent.com/kobima6813/einvoice-conformance-matrix/main/docs/img/matrix.png"><meta name="twitter:card" content="summary_large_image">
 <style>
 body{font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1d2433;max-width:920px;margin:0 auto;padding:24px}
 h1{font-size:30px;line-height:1.2;margin:.2em 0}h2{margin-top:1.8em}.lead{font-size:18px;color:#3b4459}
@@ -29,6 +31,8 @@ td.n{text-align:right}.bad{background:#fdecec;font-weight:600}.cards{display:gri
 <tr><td>Mustang 2.26.0 — library-computed totals</td><td>B2B</td><td class="n">100</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n bad">90,7</td></tr>
 <tr><td>Mustang 2.26.0 — library-computed totals</td><td>B2C</td><td class="n">100</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n bad">66,7</td></tr>
 <tr><td>horstoeko/zugferd 1.0.133, drafthorse 2025.2.0 (reference totals)</td><td>beide</td><td class="n">100</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
+<tr><td>josemmo/einvoicing 0.3.1 — von der Bibliothek berechnete Summen, Rundungsmatrix 2 Stellen</td><td>B2B</td><td class="n">100</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n bad">90,7</td></tr>
+<tr><td>josemmo/einvoicing 0.3.1 — von der Bibliothek berechnete Summen, Rundungsmatrix 2 Stellen</td><td>B2C</td><td class="n">100</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n bad">66,7</td></tr>
 </table>
 <p class="small">Je Konfiguration 300 B2B- + 300 B2C-Warenkörbe (synthetisch; DE, 19 %/7 % USt., Gutscheine, Versand). „n/a“ = kein XRechnung-Szenario anwendbar (keine Ablehnung). Peppol-Regeln gelten nur für Peppol-BIS-Dokumente; die Befunde zeigen Widersprüche zwischen Regelwerken, keine rechtliche Ungültigkeit. Methode und Einschränkungen im Repository.</p>
 
