@@ -8,3 +8,5 @@ generators/*/build/
 generators/*/.site/
 __pycache__/
 *.pyc
+generators/*/bin/
+generators/*/obj/

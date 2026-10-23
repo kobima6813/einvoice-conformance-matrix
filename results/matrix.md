@@ -22,6 +22,10 @@
 | odoo19-xr-round_globally | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.3 |
 | odoo19-xr-round_per_line | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 13.7 |
 | odoo19-xr-round_per_line | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 15.3 |
+| speedata0.0.23-xrechnung-cii | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 90.7 | 90.7 |
+| speedata0.0.23-xrechnung-cii | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
+| speedata0.0.23-xrechnung-ubl | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 90.7 | 90.7 |
+| speedata0.0.23-xrechnung-ubl | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
 | wcpdf5164-bis3-rsno | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 8.7 |
 | wcpdf5164-bis3-rsno | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 2.7 |
 | wcpdf5164-bis3-rsyes | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 8.7 |
@@ -30,3 +34,9 @@
 | wcpdf5164-fx-rsno | b2c | 300 | 57.0 | 0.0 | 43.0 | 0.0 | 0.0 | 0.0 | 2.7 |
 | wcpdf5164-fx-rsyes | b2b | 300 | 63.7 | 0.0 | 36.3 | 0.0 | 0.0 | 0.0 | 8.7 |
 | wcpdf5164-fx-rsyes | b2c | 300 | 57.0 | 0.0 | 43.0 | 0.0 | 0.0 | 0.0 | 2.7 |
+| zugferdcs18.0.1-xrechnung-cii+ref-totals | b2b | 300 | 0.0 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| zugferdcs18.0.1-xrechnung-cii+ref-totals | b2c | 300 | 0.0 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| zugferdcs18.0.1-xrechnung-ubl+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| zugferdcs18.0.1-xrechnung-ubl+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |

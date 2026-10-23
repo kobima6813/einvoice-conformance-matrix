@@ -3,7 +3,7 @@
 **Find out whether your XRechnung / ZUGFeRD / Peppol invoices actually pass KoSIT, EN 16931 and Peppol, in one CI step.**
 
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Invoices tested](https://img.shields.io/badge/invoices%20tested-9%2C000-informational)](#headline-matrix-9000-invoices)
+[![Invoices tested](https://img.shields.io/badge/invoices%20tested-12%2C000-informational)](#headline-matrix-12000-invoices)
 [![Live matrix](https://img.shields.io/badge/live-matrix-1f5fbf)](https://kobima6813.github.io/einvoice-conformance-matrix/)
 [![GitHub stars](https://img.shields.io/github/stars/kobima6813/einvoice-conformance-matrix?style=social)](https://github.com/kobima6813/einvoice-conformance-matrix/stargazers)
 
@@ -31,7 +31,7 @@ All validator artefacts are downloaded at runtime from their official sources an
 > The corpus is **synthetic**: 600 generated tax-inclusive carts. No real orders, customers or personal data
 > are included. All names, addresses, VAT IDs and IBANs in the invoices are placeholder/test values.
 
-## Headline matrix (9,000 invoices)
+## Headline matrix (12,000 invoices)
 
 300 B2B + 300 B2C carts per generator configuration (German VAT 19 % / 7 %, percentage coupons, shipping).
 
@@ -53,6 +53,11 @@ All validator artefacts are downloaded at runtime from their official sources an
 | josemmo/einvoicing 0.3.1, totals computed by the library, rounding matrix 2 dp (XRechnung UBL) | b2b | 100 | 0 | 0 | 0 | 0 | **90.7** |
 | josemmo/einvoicing 0.3.1, totals computed by the library, rounding matrix 2 dp (XRechnung UBL) | b2c | 100 | 0 | 0 | 0 | 0 | **66.7** |
 | josemmo/einvoicing 0.3.1, library default rounding (no preset) | b2b / b2c | 0.7–1.7 | 0 | 0 | **98.0–98.7** | 0 | **99.3–99.7** |
+| speedata/einvoice 0.0.23, VAT breakdown + totals computed by the library (XRechnung CII and UBL) | b2b | 100 | 0 | 0 | 0 | 0 | **90.7** |
+| speedata/einvoice 0.0.23, VAT breakdown + totals computed by the library (XRechnung CII and UBL) | b2c | 100 | 0 | 0 | 0 | 0 | **66.7** |
+| ZUGFeRD-csharp 18.0.1, XRechnung UBL, reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
+| ZUGFeRD-csharp 18.0.1, XRechnung CII, no delivery date set | b2b / b2c | 0 | 0 | **100** | 0 | 0 | 0 |
+| ZUGFeRD-csharp 18.0.1, XRechnung CII, delivery date (BT-72) set | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 
 Full per-configuration table: [`results/matrix.md`](results/matrix.md) / [`results/matrix.csv`](results/matrix.csv).
 WooCommerce rows are identical for both "round tax at subtotal" settings; Odoo rows cover both tax rounding modes.
@@ -76,6 +81,13 @@ What the numbers mean:
   (90.7 % / 66.7 %; same tax-inclusive vs. net gap). With no preset and no rounding matrix, the library writes amounts with up to
   8 decimals (e.g. `PayableAmount 46.1125`), so 98–99 % fail BR-DEC-* / BR-CO-14/15. This is a configuration default rather than a
   new bug (earlier discussion: [#29](https://github.com/josemmo/einvoicing/issues/29)); set a preset or a rounding matrix.
+* **speedata/einvoice 0.0.23** (added 23 Oct 2026): the integrator sets line net amounts and the library computes the VAT
+  breakdown and document totals (`UpdateApplicableTradeTax`, `UpdateTotals`). Every CII and UBL invoice passes KoSIT, CEN and
+  Peppol calculation rules. The amount-due gap (90.7 % / 66.7 %) is the same tax-inclusive vs. net gap as Mustang, not a library defect.
+* **ZUGFeRD-csharp 18.0.1** (added 23 Oct 2026) computes no document totals, so reference totals are supplied. UBL output passes
+  everything. CII output is schema-invalid in 100 % of our invoices when no delivery information is set: the writer drops the empty
+  `ram:ApplicableHeaderTradeDelivery`, which the CII XSD requires. This is already known upstream, with an open fix
+  ([PR #981](https://github.com/stephanstapel/ZUGFeRD-csharp/pull/981)). Workaround: set `ActualDeliveryDate` (BT-72); with it, 100 % pass.
 * **horstoeko/zugferd and drafthorse** do not compute totals; given correct reference totals (with BT-114
   rounding amount) they produce invoices that pass all checks. The arithmetic is the integrator's job.
 
@@ -104,6 +116,7 @@ Bugs found while building the matrix, reported to the maintainers with a repro a
 | WooCommerce PDF Invoices & Packing Slips 5.16.4 | Factur-X: `ram:RoundingAmount` out of XSD order | [#1662](https://github.com/wpovernight/woocommerce-pdf-invoices-packing-slips/issues/1662) | Open |
 | josemmo/einvoicing 0.3.1 | BT-106 ≠ Σ written BT-131 (BR-CO-10) | [#93](https://github.com/josemmo/einvoicing/issues/93) | Open |
 | speedata/einvoice (≤ v0.0.20) | UBL writer: XSD element order (AllowanceCharge, LegalMonetaryTotal); BT-27/BT-28 swapped (BR-06/BR-07) | [#185](https://github.com/speedata/einvoice/issues/185) | **Fixed ([PR #186](https://github.com/speedata/einvoice/pull/186)), released in [v0.0.23](https://github.com/speedata/einvoice/releases/tag/v0.0.23); re-tested: 9/9 UBL repro invoices KoSIT-acceptable.** The maintainer also fixed related issues #187–#190. |
+| ZUGFeRD-csharp 18.0.1 | CII: required empty `ApplicableHeaderTradeDelivery` dropped when no delivery data (XSD invalid) | [PR #981](https://github.com/stephanstapel/ZUGFeRD-csharp/pull/981) (not ours) | Known, fix PR open; workaround: set BT-72 |
 | Mustang 2.26.0 | Library-computed totals vs. charged amount | [#1316](https://github.com/ZUGFeRD/mustangproject/issues/1316) | Fixed on master ([PR #1318](https://github.com/ZUGFeRD/mustangproject/pull/1318)), unreleased |
 | horstoeko/zugferd 1.0.132 | Exempt/other VAT categories: broken sprintf / missing VAT-table entry | [#390](https://github.com/horstoeko/zugferd/issues/390) | Released in [v1.0.133](https://github.com/horstoeko/zugferd/releases/tag/v1.0.133) ([7ae8164](https://github.com/horstoeko/zugferd/commit/7ae8164)); re-tested: E/AE/K/G/O exemption reasons KoSIT-acceptable |
 

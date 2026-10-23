@@ -109,6 +109,26 @@
   "peppol_R120_fail": 0,
   "xsd_invalid": 0
  },
+ "speedata0.0.23-xrechnung-cii": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 472,
+  "due_ne_sim": 472,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "speedata0.0.23-xrechnung-ubl": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 472,
+  "due_ne_sim": 472,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
  "wcpdf5164-bis3-rsno": {
   "cen_calc_fail": 0,
   "due_ne_order": 0,
@@ -148,5 +168,35 @@
   "n": 600,
   "peppol_R120_fail": 0,
   "xsd_invalid": 238
+ },
+ "zugferdcs18.0.1-xrechnung-cii+ref-totals": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 0,
+  "kosit_accept": 0,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 600
+ },
+ "zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 0,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "zugferdcs18.0.1-xrechnung-ubl+ref-totals": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 0,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
  }
 }
