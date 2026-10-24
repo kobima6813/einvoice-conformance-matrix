@@ -10,3 +10,4 @@ __pycache__/
 *.pyc
 generators/*/bin/
 generators/*/obj/
+work_fr/

@@ -1,0 +1,1542 @@
+{
+ "_doc": "Per-version history: which library version/config failed or passed which rule, and when. Matrix rows = 600 synthetic orders each (date = date the row was added to the matrix, from git history). Upstream transitions: dates are UTC from the GitHub API, checked 2026-10-25. Note: generators/horstoeko/composer.json now pins 1.0.133 while the matrix tag still reads 1.0.132.",
+ "matrix_and_scenarios": [
+  {
+   "library": "pretix/python-drafthorse",
+   "version_config": "drafthorse2025.2.0-en16931+ref-totals",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "pretix/python-drafthorse",
+   "version_config": "drafthorse2025.2.0-en16931+ref-totals",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "pretix/python-drafthorse",
+   "version_config": "drafthorse2025.2.0-en16931+ref-totals",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "pretix/python-drafthorse",
+   "version_config": "drafthorse2025.2.0-en16931+ref-totals",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "pretix/python-drafthorse",
+   "version_config": "drafthorse2025.2.0-en16931+ref-totals",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "akretion/factur-x",
+   "version_config": "facturx7.7-fr-en16931+ref-totals",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-24",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "akretion/factur-x",
+   "version_config": "facturx7.7-fr-en16931+ref-totals",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-24",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "akretion/factur-x",
+   "version_config": "facturx7.7-fr-en16931+ref-totals",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-24",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "akretion/factur-x",
+   "version_config": "facturx7.7-fr-en16931+ref-totals",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-24",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "akretion/factur-x",
+   "version_config": "facturx7.7-fr-en16931+ref-totals",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-24",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "horstoeko/zugferd",
+   "version_config": "horstoeko-zugferd1.0.132-en16931+ref-totals",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "horstoeko/zugferd",
+   "version_config": "horstoeko-zugferd1.0.132-en16931+ref-totals",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "horstoeko/zugferd",
+   "version_config": "horstoeko-zugferd1.0.132-en16931+ref-totals",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "horstoeko/zugferd",
+   "version_config": "horstoeko-zugferd1.0.132-en16931+ref-totals",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "horstoeko/zugferd",
+   "version_config": "horstoeko-zugferd1.0.132-en16931+ref-totals",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "josemmo/einvoicing",
+   "version_config": "josemmo0.3.1-xrechnung-default",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "josemmo/einvoicing",
+   "version_config": "josemmo0.3.1-xrechnung-default",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "fail",
+   "failing": 590,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "josemmo/einvoicing",
+   "version_config": "josemmo0.3.1-xrechnung-default",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "josemmo/einvoicing",
+   "version_config": "josemmo0.3.1-xrechnung-default",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "fail",
+   "failing": 597,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "josemmo/einvoicing",
+   "version_config": "josemmo0.3.1-xrechnung-default",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "fail",
+   "failing": 593,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "josemmo/einvoicing",
+   "version_config": "josemmo0.3.1-xrechnung-round2",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "josemmo/einvoicing",
+   "version_config": "josemmo0.3.1-xrechnung-round2",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "josemmo/einvoicing",
+   "version_config": "josemmo0.3.1-xrechnung-round2",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "josemmo/einvoicing",
+   "version_config": "josemmo0.3.1-xrechnung-round2",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "fail",
+   "failing": 472,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "josemmo/einvoicing",
+   "version_config": "josemmo0.3.1-xrechnung-round2",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "ZUGFeRD/mustangproject",
+   "version_config": "mustang2.26.0-auto-totals-xrechnung",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "ZUGFeRD/mustangproject",
+   "version_config": "mustang2.26.0-auto-totals-xrechnung",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "ZUGFeRD/mustangproject",
+   "version_config": "mustang2.26.0-auto-totals-xrechnung",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "ZUGFeRD/mustangproject",
+   "version_config": "mustang2.26.0-auto-totals-xrechnung",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "fail",
+   "failing": 472,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "ZUGFeRD/mustangproject",
+   "version_config": "mustang2.26.0-auto-totals-xrechnung",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "num-num/ubl-invoice",
+   "version_config": "numnum2.4.1-peppolbis3+ref-totals",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-24",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "num-num/ubl-invoice",
+   "version_config": "numnum2.4.1-peppolbis3+ref-totals",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-24",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "num-num/ubl-invoice",
+   "version_config": "numnum2.4.1-peppolbis3+ref-totals",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-24",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "num-num/ubl-invoice",
+   "version_config": "numnum2.4.1-peppolbis3+ref-totals",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-24",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "num-num/ubl-invoice",
+   "version_config": "numnum2.4.1-peppolbis3+ref-totals",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "n/a (no KoSIT scenario for this format)",
+   "failing": null,
+   "of": 600,
+   "date_tested": "2026-10-24",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-bis3-round_globally",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-bis3-round_globally",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-bis3-round_globally",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-bis3-round_globally",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-bis3-round_globally",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "n/a (no KoSIT scenario for this format)",
+   "failing": null,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-bis3-round_per_line",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-bis3-round_per_line",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-bis3-round_per_line",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-bis3-round_per_line",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-bis3-round_per_line",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "n/a (no KoSIT scenario for this format)",
+   "failing": null,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-fx-round_globally",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-fx-round_globally",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "fail",
+   "failing": 226,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-fx-round_globally",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "fail",
+   "failing": 242,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-fx-round_globally",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "fail",
+   "failing": 20,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-fx-round_globally",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "n/a (no KoSIT scenario for this format)",
+   "failing": null,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-fx-round_per_line",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-fx-round_per_line",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-fx-round_per_line",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "fail",
+   "failing": 242,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-fx-round_per_line",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-fx-round_per_line",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "n/a (no KoSIT scenario for this format)",
+   "failing": null,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-xr-round_globally",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-xr-round_globally",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-xr-round_globally",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-xr-round_globally",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-xr-round_globally",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-xr-round_per_line",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-xr-round_per_line",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-xr-round_per_line",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-xr-round_per_line",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "odoo/odoo (Odoo 19)",
+   "version_config": "odoo19-xr-round_per_line",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "speedata/einvoice",
+   "version_config": "speedata0.0.23-xrechnung-cii",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "speedata/einvoice",
+   "version_config": "speedata0.0.23-xrechnung-cii",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "speedata/einvoice",
+   "version_config": "speedata0.0.23-xrechnung-cii",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "speedata/einvoice",
+   "version_config": "speedata0.0.23-xrechnung-cii",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "fail",
+   "failing": 472,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "speedata/einvoice",
+   "version_config": "speedata0.0.23-xrechnung-cii",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "speedata/einvoice",
+   "version_config": "speedata0.0.23-xrechnung-ubl",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "speedata/einvoice",
+   "version_config": "speedata0.0.23-xrechnung-ubl",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "speedata/einvoice",
+   "version_config": "speedata0.0.23-xrechnung-ubl",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "speedata/einvoice",
+   "version_config": "speedata0.0.23-xrechnung-ubl",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "fail",
+   "failing": 472,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "speedata/einvoice",
+   "version_config": "speedata0.0.23-xrechnung-ubl",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-bis3-rsno",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-bis3-rsno",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-bis3-rsno",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-bis3-rsno",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-bis3-rsno",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "n/a (no KoSIT scenario for this format)",
+   "failing": null,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-bis3-rsyes",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-bis3-rsyes",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-bis3-rsyes",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-bis3-rsyes",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-bis3-rsyes",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "n/a (no KoSIT scenario for this format)",
+   "failing": null,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-fx-rsno",
+   "rule": "XSD",
+   "result": "fail",
+   "failing": 238,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-fx-rsno",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-fx-rsno",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-fx-rsno",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-fx-rsno",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "fail",
+   "failing": 238,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-fx-rsyes",
+   "rule": "XSD",
+   "result": "fail",
+   "failing": 238,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-fx-rsyes",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-fx-rsyes",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-fx-rsyes",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "wcpdf5164-fx-rsyes",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "fail",
+   "failing": 238,
+   "of": 600,
+   "date_tested": "2026-10-18",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-cii+ref-totals",
+   "rule": "XSD",
+   "result": "fail",
+   "failing": 600,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-cii+ref-totals",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-cii+ref-totals",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-cii+ref-totals",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-cii+ref-totals",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "fail",
+   "failing": 600,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-ubl+ref-totals",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-ubl+ref-totals",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-ubl+ref-totals",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-ubl+ref-totals",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "zugferdcs18.0.1-xrechnung-ubl+ref-totals",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-23",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "drafthorse2025.2.0+factur-x7.7",
+   "version_config": "EN16931 / FR01-standard-20-5.5",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "drafthorse2025.2.0+factur-x7.7",
+   "version_config": "EN16931 / FR02-franchise-293B",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "drafthorse2025.2.0+factur-x7.7",
+   "version_config": "EN16931 / FR03-autoliquidation-AE",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "drafthorse2025.2.0+factur-x7.7",
+   "version_config": "EN16931 / FR04-intra-EU-K",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "drafthorse2025.2.0+factur-x7.7",
+   "version_config": "EN16931 / FR05-four-FR-rates",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "drafthorse2025.2.0+factur-x7.7",
+   "version_config": "EXTENDED / FR01-standard-20-5.5",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "drafthorse2025.2.0+factur-x7.7",
+   "version_config": "EXTENDED / FR02-franchise-293B",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "drafthorse2025.2.0+factur-x7.7",
+   "version_config": "EXTENDED / FR03-autoliquidation-AE",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "drafthorse2025.2.0+factur-x7.7",
+   "version_config": "EXTENDED / FR04-intra-EU-K",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "drafthorse2025.2.0+factur-x7.7",
+   "version_config": "EXTENDED / FR05-four-FR-rates",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.132",
+   "version_config": "EN16931 / FR01-standard-20-5.5",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.132",
+   "version_config": "EN16931 / FR02-franchise-293B",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.132",
+   "version_config": "EN16931 / FR03-autoliquidation-AE",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.132",
+   "version_config": "EN16931 / FR04-intra-EU-K",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.132",
+   "version_config": "EN16931 / FR05-four-FR-rates",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.132",
+   "version_config": "EXTENDED / FR01-standard-20-5.5",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.132",
+   "version_config": "EXTENDED / FR02-franchise-293B",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.132",
+   "version_config": "EXTENDED / FR03-autoliquidation-AE",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.132",
+   "version_config": "EXTENDED / FR04-intra-EU-K",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.132",
+   "version_config": "EXTENDED / FR05-four-FR-rates",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.133",
+   "version_config": "EN16931 / FR01-standard-20-5.5",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.133",
+   "version_config": "EN16931 / FR02-franchise-293B",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.133",
+   "version_config": "EN16931 / FR03-autoliquidation-AE",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.133",
+   "version_config": "EN16931 / FR04-intra-EU-K",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.133",
+   "version_config": "EN16931 / FR05-four-FR-rates",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.133",
+   "version_config": "EXTENDED / FR01-standard-20-5.5",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.133",
+   "version_config": "EXTENDED / FR02-franchise-293B",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.133",
+   "version_config": "EXTENDED / FR03-autoliquidation-AE",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.133",
+   "version_config": "EXTENDED / FR04-intra-EU-K",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  },
+  {
+   "library": "horstoeko-zugferd1.0.133",
+   "version_config": "EXTENDED / FR05-four-FR-rates",
+   "rule": "French scenarios: Factur-X XSD, CEN, FX-EXTENDED schematron, KoSIT, FR field checks",
+   "result": "pass",
+   "failing": 0,
+   "of": null,
+   "date_tested": "2026-10-25",
+   "source": "results/fr/fr_results.json"
+  }
+ ],
+ "upstream_transitions": [
+  {
+   "library": "speedata/einvoice",
+   "version_config": "<= v0.0.20 (UBL writer)",
+   "rule": "UBL 2.1 XSD element order; BR-06/BR-07 (BT-27/BT-28 swapped)",
+   "result": "fail",
+   "date": "2026-10-19",
+   "event": "reported",
+   "ref": "https://github.com/speedata/einvoice/issues/185"
+  },
+  {
+   "library": "speedata/einvoice",
+   "version_config": "v0.0.23",
+   "rule": "same",
+   "result": "pass (600/600 KoSIT accept, UBL and CII)",
+   "date": "2026-10-19",
+   "event": "fixed (PR #186), tag v0.0.23; issue closed 2026-10-19",
+   "ref": "https://github.com/speedata/einvoice/pull/186"
+  },
+  {
+   "library": "horstoeko/zugferd",
+   "version_config": "1.0.132",
+   "rule": "VAT breakdown for E/AE/K/G/O (exemption reason sprintf / missing VAT-table entry)",
+   "result": "fail",
+   "date": "2026-10-20",
+   "event": "reported",
+   "ref": "https://github.com/horstoeko/zugferd/issues/390"
+  },
+  {
+   "library": "horstoeko/zugferd",
+   "version_config": "1.0.133",
+   "rule": "same",
+   "result": "pass (E/AE/K/G/O KoSIT-acceptable)",
+   "date": "2026-10-20",
+   "event": "released 2026-10-20 12:49 UTC",
+   "ref": "https://github.com/horstoeko/zugferd/releases/tag/v1.0.133"
+  },
+  {
+   "library": "ZUGFeRD/mustangproject",
+   "version_config": "2.26.0",
+   "rule": "library-computed totals vs. charged amount (BT-115 = order total, our check)",
+   "result": "fail (472/600)",
+   "date": "2026-10-19",
+   "event": "reported",
+   "ref": "https://github.com/ZUGFeRD/mustangproject/issues/1316"
+  },
+  {
+   "library": "ZUGFeRD/mustangproject",
+   "version_config": "master after PR #1318",
+   "rule": "same",
+   "result": "fix merged, unreleased (latest release core-2.26.0, 2026-08-25)",
+   "date": "2026-10-20",
+   "event": "PR merged",
+   "ref": "https://github.com/ZUGFeRD/mustangproject/pull/1318"
+  },
+  {
+   "library": "wpovernight/woocommerce-pdf-invoices-packing-slips",
+   "version_config": "5.16.4 (Factur-X)",
+   "rule": "XSD: ram:RoundingAmount after GrandTotalAmount",
+   "result": "fail (b2b 109/300, b2c 129/300)",
+   "date": "2026-10-18",
+   "event": "reported; independently reproduced by a third party with the KoSIT validator on 2026-10-23",
+   "ref": "https://github.com/wpovernight/woocommerce-pdf-invoices-packing-slips/issues/1662"
+  },
+  {
+   "library": "josemmo/einvoicing",
+   "version_config": "0.3.1 default config",
+   "rule": "BR-CO-10 (BT-106 = sum of BT-131)",
+   "result": "fail (590/600 CEN)",
+   "date": "2026-10-19",
+   "event": "reported, open",
+   "ref": "https://github.com/josemmo/einvoicing/issues/93"
+  },
+  {
+   "library": "stephanstapel/ZUGFeRD-csharp",
+   "version_config": "18.0.1 CII without BT-72",
+   "rule": "XSD: empty ApplicableHeaderTradeDelivery dropped",
+   "result": "fail (600/600 XSD invalid); pass with BT-72 set",
+   "date": "2026-10-23",
+   "event": "known upstream, fix PR #981 open since 2026-09-18 (not ours)",
+   "ref": "https://github.com/stephanstapel/ZUGFeRD-csharp/pull/981"
+  },
+  {
+   "library": "odoo/odoo",
+   "version_config": "18.0 before PR #295442",
+   "rule": "CII grand total included cash rounding",
+   "result": "fail",
+   "date": "2026-10-15",
+   "event": "PR opened by Odoo developer citing matrix data",
+   "ref": "https://github.com/odoo/odoo/pull/295442"
+  },
+  {
+   "library": "odoo/odoo",
+   "version_config": "18.0 with PR #295442",
+   "rule": "same",
+   "result": "merged by Odoo merge bot into 18.0 (closed 2026-10-23 23:57 UTC)",
+   "date": "2026-10-23",
+   "event": "merged",
+   "ref": "https://github.com/odoo/odoo/pull/295442"
+  },
+  {
+   "library": "odoo/odoo",
+   "version_config": "18.0 @60fdb530",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "fail (242/300 B2B)",
+   "date": "2026-10-24",
+   "event": "baseline for follow-up PRs",
+   "ref": "https://github.com/odoo/odoo/pull/297750#issuecomment-6389712174"
+  },
+  {
+   "library": "odoo/odoo",
+   "version_config": "18.0 @60fdb530 + PR #297750",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass (0/300 B2B), no new XSD/CEN errors",
+   "date": "2026-10-24",
+   "event": "tested by us; PR open",
+   "ref": "https://github.com/odoo/odoo/pull/297750#issuecomment-6389712174"
+  },
+  {
+   "library": "odoo/odoo",
+   "version_config": "18.0 @60fdb530 round_globally",
+   "rule": "BR-CO-10 / BR-S-08",
+   "result": "fail (B2B 93/98 of 300, B2C 125/128 of 300)",
+   "date": "2026-10-24",
+   "event": "baseline",
+   "ref": "https://github.com/odoo/odoo/pull/297752#issuecomment-6389712351"
+  },
+  {
+   "library": "odoo/odoo",
+   "version_config": "18.0 @60fdb530 + PR #297752",
+   "rule": "BR-CO-10 / BR-S-08",
+   "result": "pass (0), no XSD errors; BT-114 RoundingAmount now used on 218/600",
+   "date": "2026-10-24",
+   "event": "tested by us; maintainer confirmed intended; PR open",
+   "ref": "https://github.com/odoo/odoo/pull/297752#issuecomment-6389712351"
+  }
+ ]
+}

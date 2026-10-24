@@ -1,0 +1,749 @@
+[
+ {
+  "generator": "drafthorse2025.2.0+factur-x7.7",
+  "profile": "EN16931",
+  "scenario": "FR01-standard-20-5.5",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "drafthorse2025.2.0+factur-x7.7",
+  "profile": "EN16931",
+  "scenario": "FR02-franchise-293B",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "drafthorse2025.2.0+factur-x7.7",
+  "profile": "EN16931",
+  "scenario": "FR03-autoliquidation-AE",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "drafthorse2025.2.0+factur-x7.7",
+  "profile": "EN16931",
+  "scenario": "FR04-intra-EU-K",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "drafthorse2025.2.0+factur-x7.7",
+  "profile": "EN16931",
+  "scenario": "FR05-four-FR-rates",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "drafthorse2025.2.0+factur-x7.7",
+  "profile": "EXTENDED",
+  "scenario": "FR01-standard-20-5.5",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "drafthorse2025.2.0+factur-x7.7",
+  "profile": "EXTENDED",
+  "scenario": "FR02-franchise-293B",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "drafthorse2025.2.0+factur-x7.7",
+  "profile": "EXTENDED",
+  "scenario": "FR03-autoliquidation-AE",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "drafthorse2025.2.0+factur-x7.7",
+  "profile": "EXTENDED",
+  "scenario": "FR04-intra-EU-K",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "drafthorse2025.2.0+factur-x7.7",
+  "profile": "EXTENDED",
+  "scenario": "FR05-four-FR-rates",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.132",
+  "profile": "EN16931",
+  "scenario": "FR01-standard-20-5.5",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.132",
+  "profile": "EN16931",
+  "scenario": "FR02-franchise-293B",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.132",
+  "profile": "EN16931",
+  "scenario": "FR03-autoliquidation-AE",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.132",
+  "profile": "EN16931",
+  "scenario": "FR04-intra-EU-K",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.132",
+  "profile": "EN16931",
+  "scenario": "FR05-four-FR-rates",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.132",
+  "profile": "EXTENDED",
+  "scenario": "FR01-standard-20-5.5",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.132",
+  "profile": "EXTENDED",
+  "scenario": "FR02-franchise-293B",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.132",
+  "profile": "EXTENDED",
+  "scenario": "FR03-autoliquidation-AE",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.132",
+  "profile": "EXTENDED",
+  "scenario": "FR04-intra-EU-K",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.132",
+  "profile": "EXTENDED",
+  "scenario": "FR05-four-FR-rates",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.133",
+  "profile": "EN16931",
+  "scenario": "FR01-standard-20-5.5",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.133",
+  "profile": "EN16931",
+  "scenario": "FR02-franchise-293B",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.133",
+  "profile": "EN16931",
+  "scenario": "FR03-autoliquidation-AE",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.133",
+  "profile": "EN16931",
+  "scenario": "FR04-intra-EU-K",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.133",
+  "profile": "EN16931",
+  "scenario": "FR05-four-FR-rates",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": null,
+  "kosit": {
+   "accept": true,
+   "scenario": null,
+   "errors": []
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.133",
+  "profile": "EXTENDED",
+  "scenario": "FR01-standard-20-5.5",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.133",
+  "profile": "EXTENDED",
+  "scenario": "FR02-franchise-293B",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.133",
+  "profile": "EXTENDED",
+  "scenario": "FR03-autoliquidation-AE",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.133",
+  "profile": "EXTENDED",
+  "scenario": "FR04-intra-EU-K",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-EADDR": true,
+   "F-NOTES": true,
+   "F-EXEMPT": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ },
+ {
+  "generator": "horstoeko-zugferd1.0.133",
+  "profile": "EXTENDED",
+  "scenario": "FR05-four-FR-rates",
+  "generator_errors": [],
+  "xsd_valid": true,
+  "xsd_errors": [],
+  "cen_errors": [],
+  "fx_extended_errors": [],
+  "kosit": {
+   "accept": null,
+   "scenario": null,
+   "errors": [],
+   "note": "no KoSIT scenario for this profile (not applicable)"
+  },
+  "fr_checks": {
+   "F-SIREN": true,
+   "F-SIRET": true,
+   "F-BSIREN": true,
+   "F-EADDR": true,
+   "F-NOTES": true
+  },
+  "failures": [],
+  "verdict": "pass"
+ }
+]

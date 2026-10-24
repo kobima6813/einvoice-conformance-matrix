@@ -1,0 +1,23 @@
+{
+ "report": "State of EU e-invoice interoperability — October 2026",
+ "as_of": "2026-10-25",
+ "invoices": 13200,
+ "configurations": 22,
+ "generators": 10,
+ "validator_clean_configs": 16,
+ "validator_clean_but_due_ne_order": {
+  "josemmo0.3.1-xrechnung-round2": 472,
+  "mustang2.26.0-auto-totals-xrechnung": 472,
+  "speedata0.0.23-xrechnung-cii": 472,
+  "speedata0.0.23-xrechnung-ubl": 472
+ },
+ "fr_scenarios": {
+  "invoices": 30,
+  "pass": 30
+ },
+ "sources": [
+  "results/matrix_totals.json",
+  "results/fr/fr_results.json",
+  "results/history/version_history.json"
+ ]
+}
