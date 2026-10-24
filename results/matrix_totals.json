@@ -9,6 +9,16 @@
   "peppol_R120_fail": 0,
   "xsd_invalid": 0
  },
+ "facturx7.7-fr-en16931+ref-totals": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 0,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
  "horstoeko-zugferd1.0.132-en16931+ref-totals": {
   "cen_calc_fail": 0,
   "due_ne_order": 0,

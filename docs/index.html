@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EN 16931 e-invoice conformance matrix: XRechnung, ZUGFeRD, Factur-X, Peppol tested</title>
-<meta name="description" content="Independent, reproducible test of open-source e-invoice generators (Odoo, WooCommerce, Mustang, horstoeko, drafthorse, josemmo, speedata, ZUGFeRD-csharp, num-num/ubl-invoice) against KoSIT/XRechnung, EN 16931 and Peppol BIS 3 rules.">
+<meta name="description" content="Independent, reproducible test of open-source e-invoice generators (Odoo, WooCommerce, Mustang, horstoeko, drafthorse, josemmo, speedata, ZUGFeRD-csharp, num-num/ubl-invoice, factur-x) against KoSIT/XRechnung, EN 16931 and Peppol BIS 3 rules.">
 <link rel="canonical" href="https://kobima6813.github.io/einvoice-conformance-matrix/"><link rel="alternate" hreflang="en" href="https://kobima6813.github.io/einvoice-conformance-matrix/"><link rel="alternate" hreflang="de" href="https://kobima6813.github.io/einvoice-conformance-matrix/de.html">
-<meta property="og:type" content="website"><meta property="og:url" content="https://kobima6813.github.io/einvoice-conformance-matrix/"><meta property="og:title" content="EN 16931 e-invoice conformance matrix: XRechnung, ZUGFeRD, Factur-X, Peppol tested"><meta property="og:description" content="Independent, reproducible test of open-source e-invoice generators (Odoo, WooCommerce, Mustang, horstoeko, drafthorse, josemmo, speedata, ZUGFeRD-csharp, num-num/ubl-invoice) against KoSIT/XRechnung, EN 16931 and Peppol BIS 3 rules."><meta property="og:image" content="https://raw.githubusercontent.com/kobima6813/einvoice-conformance-matrix/main/docs/img/matrix.png"><meta name="twitter:card" content="summary_large_image">
+<meta property="og:type" content="website"><meta property="og:url" content="https://kobima6813.github.io/einvoice-conformance-matrix/"><meta property="og:title" content="EN 16931 e-invoice conformance matrix: XRechnung, ZUGFeRD, Factur-X, Peppol tested"><meta property="og:description" content="Independent, reproducible test of open-source e-invoice generators (Odoo, WooCommerce, Mustang, horstoeko, drafthorse, josemmo, speedata, ZUGFeRD-csharp, num-num/ubl-invoice, factur-x) against KoSIT/XRechnung, EN 16931 and Peppol BIS 3 rules."><meta property="og:image" content="https://raw.githubusercontent.com/kobima6813/einvoice-conformance-matrix/main/docs/img/matrix.png"><meta name="twitter:card" content="summary_large_image">
 <style>
 body{font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#1d2433;max-width:920px;margin:0 auto;padding:24px}
 h1{font-size:30px;line-height:1.2;margin:.2em 0}h2{margin-top:1.8em}.lead{font-size:18px;color:#3b4459}
@@ -15,7 +15,7 @@ td.n{text-align:right}.bad{background:#fdecec;font-weight:600}.cards{display:gri
 </style></head><body>
 <nav class="small"><a href="./">English</a><a href="de.html">Deutsch</a><a href="audit.html">Conformance check</a><a href="https://github.com/kobima6813/einvoice-conformance-matrix">GitHub</a></nav>
 <h1>39.7% of Factur-X invoices from a popular WooCommerce invoice plugin fail schema validation</h1>
-<p class="lead">We fed the same 600 synthetic shop orders through WooCommerce, Odoo 19 and seven libraries, then checked all 12,600 invoices against KoSIT/XRechnung, CEN EN 16931, Peppol BIS 3.0.20 and the amount actually charged. The rule sets often disagree.</p>
+<p class="lead">We fed the same 600 synthetic shop orders through WooCommerce, Odoo 19 and eight libraries, then checked all 13,200 invoices against KoSIT/XRechnung, CEN EN 16931, Peppol BIS 3.0.20 and the amount actually charged. The rule sets often disagree.</p>
 <p><a class="btn" href="https://github.com/kobima6813/einvoice-conformance-matrix">Open-source matrix &amp; GitHub Action</a></p>
 
 <h2>Headline results</h2>
@@ -38,6 +38,7 @@ td.n{text-align:right}.bad{background:#fdecec;font-weight:600}.cards{display:gri
 <tr><td>ZUGFeRD-csharp 18.0.1 — XRechnung CII, no delivery date (<a href="https://github.com/stephanstapel/ZUGFeRD-csharp/pull/981">PR #981</a>)</td><td>both</td><td class="n">0</td><td class="n bad">100</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
 <tr><td>ZUGFeRD-csharp 18.0.1 — XRechnung UBL / CII with delivery date (reference totals)</td><td>both</td><td class="n">100</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
 <tr><td>num-num/ubl-invoice 2.4.1 — Peppol BIS 3 (Belgium), reference totals</td><td>both</td><td class="n">n/a</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
+<tr><td>akretion factur-x 7.7 — Factur-X PDF (France), XML read back, reference totals</td><td>both</td><td class="n">100</td><td class="n">0</td><td class="n">0</td><td class="n">0</td><td class="n">0</td></tr>
 </table>
 <p class="small">300 B2B + 300 B2C synthetic carts per configuration (DE, 19%/7% VAT, coupons, shipping). "n/a" = no XRechnung scenario applies (not a rejection). Peppol rules only bind Peppol BIS documents; findings show inconsistency between rule sets, not legal invalidity. Full method and limitations in the repository.</p>
 

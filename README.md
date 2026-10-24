@@ -31,7 +31,7 @@ All validator artefacts are downloaded at runtime from their official sources an
 > The corpus is **synthetic**: 600 generated tax-inclusive carts. No real orders, customers or personal data
 > are included. All names, addresses, VAT IDs and IBANs in the invoices are placeholder/test values.
 
-## Headline matrix (12,600 invoices)
+## Headline matrix (13,200 invoices)
 
 300 B2B + 300 B2C carts per generator configuration (German VAT 19 % / 7 %, percentage coupons, shipping).
 
@@ -59,6 +59,7 @@ All validator artefacts are downloaded at runtime from their official sources an
 | ZUGFeRD-csharp 18.0.1, XRechnung CII, no delivery date set | b2b / b2c | 0 | 0 | **100** | 0 | 0 | 0 |
 | ZUGFeRD-csharp 18.0.1, XRechnung CII, delivery date (BT-72) set | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 | num-num/ubl-invoice 2.4.1, Peppol BIS 3 (UBL, Belgian parties), reference totals supplied | b2b / b2c | n/a | 100 | 0 | 0 | 0 | 0 |
+| akretion factur-x 7.7, Factur-X EN 16931 PDF (French parties), XML read back from the PDF, reference totals | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 
 Full per-configuration table: [`results/matrix.md`](results/matrix.md) / [`results/matrix.csv`](results/matrix.csv).
 WooCommerce rows are identical for both "round tax at subtotal" settings; Odoo rows cover both tax rounding modes.
@@ -93,6 +94,11 @@ What the numbers mean:
   totals; reference amounts are passed as PHP floats, which is what its API takes. All 600 invoices pass the UBL XSD, CEN EN 16931
   and Peppol BIS 3.0.20 rules with zero errors: the float API did not cause a single cent mismatch. "n/a" for KoSIT because the
   XRechnung configuration has no scenario for plain Peppol BIS (not a rejection).
+* **akretion factur-x 7.7** (added 24 Oct 2026, France): the standard Python tool for building Factur-X PDFs. A CII EN 16931 XML
+  (French seller/buyer, reference totals, built with drafthorse) is embedded with `generate_from_binary` (its own XSD check on),
+  then read back with `get_xml_from_pdf`; the extracted XML is what we validate. 600/600: zero XSD rejects, the XML is byte-identical
+  after the PDF round trip, and every invoice passes KoSIT, CEN and the calculation rules. (Peppol rules do not bind Factur-X.)
+  The corpus keeps the German 19 %/7 % rates so rows stay comparable; validators do not check rate values per country.
 * **horstoeko/zugferd and drafthorse** do not compute totals; given correct reference totals (with BT-114
   rounding amount) they produce invoices that pass all checks. The arithmetic is the integrator's job.
 
