@@ -3,7 +3,7 @@
 **Find out whether your XRechnung / ZUGFeRD / Peppol invoices actually pass KoSIT, EN 16931 and Peppol, in one CI step.**
 
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Invoices tested](https://img.shields.io/badge/invoices%20tested-12%2C000-informational)](#headline-matrix-12000-invoices)
+[![Invoices tested](https://img.shields.io/badge/invoices%20tested-13%2C200-informational)](#headline-matrix-13200-invoices)
 [![Live matrix](https://img.shields.io/badge/live-matrix-1f5fbf)](https://kobima6813.github.io/einvoice-conformance-matrix/)
 [![GitHub stars](https://img.shields.io/github/stars/kobima6813/einvoice-conformance-matrix?style=social)](https://github.com/kobima6813/einvoice-conformance-matrix/stargazers)
 
