@@ -44,3 +44,9 @@
 | zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | zugferdcs18.0.1-xrechnung-ubl+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | zugferdcs18.0.1-xrechnung-ubl+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| easybill-zugferd6.0.0-xrechnung+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| easybill-zugferd6.0.0-xrechnung+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| gobl0.510.0-cii0.80.0-en16931 | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 6.0 | 6.0 |
+| gobl0.510.0-cii0.80.0-en16931 | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.3 | 1.3 |
+| gobl0.510.0-ubl0.97.0-peppolbis3 | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 6.0 | 6.0 |
+| gobl0.510.0-ubl0.97.0-peppolbis3 | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 1.3 | 1.3 |

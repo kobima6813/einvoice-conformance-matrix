@@ -9,12 +9,42 @@
   "peppol_R120_fail": 0,
   "xsd_invalid": 0
  },
+ "easybill-zugferd6.0.0-xrechnung+ref-totals": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 0,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
  "facturx7.7-fr-en16931+ref-totals": {
   "cen_calc_fail": 0,
   "due_ne_order": 0,
   "due_ne_sim": 0,
   "kosit_accept": 600,
   "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "gobl0.510.0-cii0.80.0-en16931": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 22,
+  "due_ne_sim": 22,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "gobl0.510.0-ubl0.97.0-peppolbis3": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 22,
+  "due_ne_sim": 22,
+  "kosit_accept": 0,
+  "kosit_nomatch": 600,
   "n": 600,
   "peppol_R120_fail": 0,
   "xsd_invalid": 0

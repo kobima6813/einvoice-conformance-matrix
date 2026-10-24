@@ -3,7 +3,7 @@
 **Find out whether your XRechnung / ZUGFeRD / Peppol invoices actually pass KoSIT, EN 16931 and Peppol, in one CI step.**
 
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Invoices tested](https://img.shields.io/badge/invoices%20tested-13%2C200-informational)](#headline-matrix-13200-invoices)
+[![Invoices tested](https://img.shields.io/badge/invoices%20tested-15%2C000-informational)](#headline-matrix-15000-invoices)
 [![Live matrix](https://img.shields.io/badge/live-matrix-1f5fbf)](https://kobima6813.github.io/einvoice-conformance-matrix/)
 [![GitHub stars](https://img.shields.io/github/stars/kobima6813/einvoice-conformance-matrix?style=social)](https://github.com/kobima6813/einvoice-conformance-matrix/stargazers)
 
@@ -31,7 +31,7 @@ All validator artefacts are downloaded at runtime from their official sources an
 > The corpus is **synthetic**: 600 generated tax-inclusive carts. No real orders, customers or personal data
 > are included. All names, addresses, VAT IDs and IBANs in the invoices are placeholder/test values.
 
-## Headline matrix (13,200 invoices)
+## Headline matrix (15,000 invoices)
 
 300 B2B + 300 B2C carts per generator configuration (German VAT 19 % / 7 %, percentage coupons, shipping).
 
@@ -60,6 +60,11 @@ All validator artefacts are downloaded at runtime from their official sources an
 | ZUGFeRD-csharp 18.0.1, XRechnung CII, delivery date (BT-72) set | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 | num-num/ubl-invoice 2.4.1, Peppol BIS 3 (UBL, Belgian parties), reference totals supplied | b2b / b2c | n/a | 100 | 0 | 0 | 0 | 0 |
 | akretion factur-x 7.7, Factur-X EN 16931 PDF (French parties), XML read back from the PDF, reference totals | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
+| easybill/zugferd-php 6.0.0, XRechnung CII, reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
+| invopop/gobl 0.510.0 + gobl.cii 0.80.0, EN 16931 CII, totals computed by GOBL from VAT-inclusive prices | b2b | 100 | 0 | 0 | 0 | 0 | **6.0** |
+| invopop/gobl 0.510.0 + gobl.cii 0.80.0, EN 16931 CII, totals computed by GOBL from VAT-inclusive prices | b2c | 100 | 0 | 0 | 0 | 0 | **1.3** |
+| invopop/gobl 0.510.0 + gobl.ubl 0.97.0, Peppol BIS 3 UBL, totals computed by GOBL | b2b | n/a | 100 | 0 | 0 | 0 | **6.0** |
+| invopop/gobl 0.510.0 + gobl.ubl 0.97.0, Peppol BIS 3 UBL, totals computed by GOBL | b2c | n/a | 100 | 0 | 0 | 0 | **1.3** |
 
 Full per-configuration table: [`results/matrix.md`](results/matrix.md) / [`results/matrix.csv`](results/matrix.csv).
 WooCommerce rows are identical for both "round tax at subtotal" settings; Odoo rows cover both tax rounding modes.
@@ -90,6 +95,14 @@ What the numbers mean:
   everything. CII output is schema-invalid in 100 % of our invoices when no delivery information is set: the writer drops the empty
   `ram:ApplicableHeaderTradeDelivery`, which the CII XSD requires. This is already known upstream, with an open fix
   ([PR #981](https://github.com/stephanstapel/ZUGFeRD-csharp/pull/981)). Workaround: set `ActualDeliveryDate` (BT-72); with it, 100 % pass.
+* **easybill/zugferd-php 6.0.0** (added 25 Oct 2026, XRechnung 3.0 CII) is a data model + serializer that computes no totals;
+  reference amounts are passed as strings. All 600 invoices are KoSIT-acceptable and pass CEN EN 16931 and Peppol BIS 3.0.20.
+* **invopop/gobl 0.510.0** (added 25 Oct 2026; GOBL is a multi-country invoicing library from Spain, here with the German regime
+  and the `eu-en16931-v2017` addon) computes all totals itself from VAT-inclusive shop prices, a percentage line discount and a
+  19 % shipping line. Exported with gobl.cii 0.80.0 (EN 16931 CII) and gobl.ubl 0.97.0 (Peppol BIS 3 UBL). Every invoice passes
+  every validator; 22 of 600 orders (18 B2B, 4 B2C, all with a coupon) state an amount due 0.01 € above what the shop charged,
+  the usual effect of converting tax-inclusive prices to EN 16931 net arithmetic (the coupon is applied per line here, while the
+  shop applies it to the cart total). Not reported upstream: it is a modelling difference, not a validator failure.
 * **num-num/ubl-invoice 2.4.1** (added 24 Oct 2026, Peppol BIS Billing 3.0, Belgian seller/buyer with 0208 endpoints) computes no
   totals; reference amounts are passed as PHP floats, which is what its API takes. All 600 invoices pass the UBL XSD, CEN EN 16931
   and Peppol BIS 3.0.20 rules with zero errors: the float API did not cause a single cent mismatch. "n/a" for KoSIT because the

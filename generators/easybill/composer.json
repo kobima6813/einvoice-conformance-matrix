@@ -1,0 +1,5 @@
+{
+    "require": {
+        "easybill/zugferd-php": "6.0.0"
+    }
+}
