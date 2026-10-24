@@ -49,6 +49,16 @@
   "peppol_R120_fail": 0,
   "xsd_invalid": 0
  },
+ "numnum2.4.1-peppolbis3+ref-totals": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 0,
+  "kosit_accept": 0,
+  "kosit_nomatch": 600,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
  "odoo19-bis3-round_globally": {
   "cen_calc_fail": 0,
   "due_ne_order": 0,

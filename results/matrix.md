@@ -10,6 +10,8 @@
 | josemmo0.3.1-xrechnung-round2 | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
 | mustang2.26.0-auto-totals-xrechnung | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 90.7 | 90.7 |
 | mustang2.26.0-auto-totals-xrechnung | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
+| numnum2.4.1-peppolbis3+ref-totals | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| numnum2.4.1-peppolbis3+ref-totals | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | odoo19-bis3-round_globally | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 6.0 |
 | odoo19-bis3-round_globally | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.3 |
 | odoo19-bis3-round_per_line | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 13.7 |

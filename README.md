@@ -31,7 +31,7 @@ All validator artefacts are downloaded at runtime from their official sources an
 > The corpus is **synthetic**: 600 generated tax-inclusive carts. No real orders, customers or personal data
 > are included. All names, addresses, VAT IDs and IBANs in the invoices are placeholder/test values.
 
-## Headline matrix (12,000 invoices)
+## Headline matrix (12,600 invoices)
 
 300 B2B + 300 B2C carts per generator configuration (German VAT 19 % / 7 %, percentage coupons, shipping).
 
@@ -58,6 +58,7 @@ All validator artefacts are downloaded at runtime from their official sources an
 | ZUGFeRD-csharp 18.0.1, XRechnung UBL, reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 | ZUGFeRD-csharp 18.0.1, XRechnung CII, no delivery date set | b2b / b2c | 0 | 0 | **100** | 0 | 0 | 0 |
 | ZUGFeRD-csharp 18.0.1, XRechnung CII, delivery date (BT-72) set | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
+| num-num/ubl-invoice 2.4.1, Peppol BIS 3 (UBL, Belgian parties), reference totals supplied | b2b / b2c | n/a | 100 | 0 | 0 | 0 | 0 |
 
 Full per-configuration table: [`results/matrix.md`](results/matrix.md) / [`results/matrix.csv`](results/matrix.csv).
 WooCommerce rows are identical for both "round tax at subtotal" settings; Odoo rows cover both tax rounding modes.
@@ -88,6 +89,10 @@ What the numbers mean:
   everything. CII output is schema-invalid in 100 % of our invoices when no delivery information is set: the writer drops the empty
   `ram:ApplicableHeaderTradeDelivery`, which the CII XSD requires. This is already known upstream, with an open fix
   ([PR #981](https://github.com/stephanstapel/ZUGFeRD-csharp/pull/981)). Workaround: set `ActualDeliveryDate` (BT-72); with it, 100 % pass.
+* **num-num/ubl-invoice 2.4.1** (added 24 Oct 2026, Peppol BIS Billing 3.0, Belgian seller/buyer with 0208 endpoints) computes no
+  totals; reference amounts are passed as PHP floats, which is what its API takes. All 600 invoices pass the UBL XSD, CEN EN 16931
+  and Peppol BIS 3.0.20 rules with zero errors: the float API did not cause a single cent mismatch. "n/a" for KoSIT because the
+  XRechnung configuration has no scenario for plain Peppol BIS (not a rejection).
 * **horstoeko/zugferd and drafthorse** do not compute totals; given correct reference totals (with BT-114
   rounding amount) they produce invoices that pass all checks. The arithmetic is the integrator's job.
 
