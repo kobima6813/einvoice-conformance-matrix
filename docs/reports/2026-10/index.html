@@ -1,0 +1,262 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>State of EU e-invoice interoperability — October 2026</title>
+<meta name="description" content="Monthly report: 13,200 invoices from 10 open-source e-invoice generators checked against KoSIT, CEN EN 16931 and Peppol, plus French Factur-X scenarios.">
+<link rel="stylesheet" href="../../site.css"><link rel="icon" href="../../favicon.svg" type="image/svg+xml"></head><body><header class="top"><div class="wrap bar"><a class="brand" href="../../"><svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#2563eb"/><path d="M9 16.5l4.5 4.5L23 11.5" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>E-Invoice <b>Conformance Lab</b></span></a><nav class="nav" aria-label="Main"><a href="../.././#results">Results</a><a href="../.././#method">Methodology</a><a href="../.././#reports">Upstream reports</a><a href="../../check.html">Self-check</a><a href="../../reports/2026-10/">Report</a><a href="../../audit.html">Get checked</a><a href="https://github.com/kobima6813/einvoice-conformance-matrix">GitHub</a></nav><div class="lang"><a href="../../de.html" hreflang="de" lang="de">DE</a></div></div></header><main class="report"><div class="wrap"><article class="doc">
+<h1>State of EU e-invoice interoperability — October 2026</h1>
+<p><em>Monthly report of the <a href="https://github.com/kobima6813/einvoice-conformance-matrix">e-invoice conformance matrix</a>. Data as of 25 Oct 2026. All numbers come from files in this repository; every upstream status links to its source.</em></p>
+<h2>Summary</h2>
+<ul>
+<li><strong>13,200 synthetic invoices</strong> from <strong>10 open-source generators</strong> (22 configurations × 600 orders: 300 B2B + 300 B2C) were checked against KoSIT 1.6.3 (XRechnung 3.0.2 configuration), the CEN EN 16931 rules and Peppol BIS 3.0.20. Source: <a href="https://github.com/kobima6813/einvoice-conformance-matrix/blob/main/results/matrix_totals.json"><code>results/matrix_totals.json</code></a>.</li>
+<li><strong>16 of 22 configurations</strong> pass every validator that applies to them. <strong>6</strong> have validator failures: josemmo default config, Odoo 19 Factur-X (both rounding modes), WooCommerce PDF Invoices Factur-X (both settings), ZUGFeRD-csharp CII without a delivery date.</li>
+<li><strong>Passing the validator is not enough:</strong> 4 configurations that pass every validator still state an amount due (BT-115) that differs from what the order charged, on <strong>472 of 600</strong> invoices each (Mustang 2.26.0 library totals, speedata 0.0.23 CII and UBL, josemmo 0.3.1 with 2-decimal rounding). These are tax-inclusive shop orders converted to EN 16931 net arithmetic; no validator checks the original order total.</li>
+<li><strong>New this month: French scenarios.</strong> 5 French-mandate scenarios × 2 Factur-X profiles (EN16931, EXTENDED) × 3 generator versions = <strong>30 invoices, 30 pass</strong> (details below).</li>
+</ul>
+<h2>Upstream fixes and reports</h2>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>What we found</th>
+<th>Status (source)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Odoo (18.0)</td>
+<td>CII grand total included cash rounding</td>
+<td>PR <a href="https://github.com/odoo/odoo/pull/295442">#295442</a> opened by an Odoo developer citing matrix data; merged by Odoo's merge bot into 18.0, closed 23 Oct 2026</td>
+</tr>
+<tr>
+<td>Odoo (18.0)</td>
+<td>PEPPOL-EN16931-R120 (line net ≠ qty × price − allowances) on 242/300 B2B invoices</td>
+<td>PR <a href="https://github.com/odoo/odoo/pull/297750">#297750</a>: we tested it, R120 drops to 0, no new XSD/CEN errors (<a href="https://github.com/odoo/odoo/pull/297750#issuecomment-6389712174">our results</a>); maintainer confirmed. Open.</td>
+</tr>
+<tr>
+<td>Odoo (18.0)</td>
+<td>BR-CO-10 / BR-S-08 with <code>round_globally</code>: 93/98 of 300 B2B, 125/128 of 300 B2C</td>
+<td>PR <a href="https://github.com/odoo/odoo/pull/297752">#297752</a>: we tested it, both go to 0 (<a href="https://github.com/odoo/odoo/pull/297752#issuecomment-6389712351">our results</a>); the remaining difference moves into BT-114 on 218/600 invoices, which the maintainer confirmed is intended. Open.</td>
+</tr>
+<tr>
+<td>WooCommerce PDF Invoices &amp; Packing Slips 5.16.4</td>
+<td>Factur-X <code>ram:RoundingAmount</code> out of XSD order: 109/300 B2B and 129/300 B2C invoices XSD-invalid</td>
+<td>Issue <a href="https://github.com/wpovernight/woocommerce-pdf-invoices-packing-slips/issues/1662">#1662</a>, open; independently reproduced by another user with the KoSIT validator on 23 Oct 2026</td>
+</tr>
+<tr>
+<td>speedata/einvoice</td>
+<td>UBL element order and BT-27/BT-28 swap (≤ v0.0.20)</td>
+<td>Issue <a href="https://github.com/speedata/einvoice/issues/185">#185</a> fixed by PR #186, released in v0.0.23; now 600/600 KoSIT-accepted for both CII and UBL</td>
+</tr>
+<tr>
+<td>horstoeko/zugferd</td>
+<td>VAT breakdown for exempt categories E/AE/K/G/O</td>
+<td>Issue <a href="https://github.com/horstoeko/zugferd/issues/390">#390</a>, released in <a href="https://github.com/horstoeko/zugferd/releases/tag/v1.0.133">v1.0.133</a> on 20 Oct 2026</td>
+</tr>
+<tr>
+<td>Mustang 2.26.0</td>
+<td>Library-computed totals differ from the charged amount (472/600)</td>
+<td>Issue <a href="https://github.com/ZUGFeRD/mustangproject/issues/1316">#1316</a>; fix <a href="https://github.com/ZUGFeRD/mustangproject/pull/1318">PR #1318</a> merged 20 Oct 2026, not yet released</td>
+</tr>
+<tr>
+<td>josemmo/einvoicing 0.3.1</td>
+<td>Default config: BR-CO-10, 590/600 CEN failures</td>
+<td>Issue <a href="https://github.com/josemmo/einvoicing/issues/93">#93</a>, open; setting a rounding preset gives 600/600 KoSIT accept</td>
+</tr>
+<tr>
+<td>ZUGFeRD-csharp 18.0.1</td>
+<td>CII without a delivery date drops a required empty element: 600/600 XSD-invalid; 600/600 pass with BT-72 set</td>
+<td>Known upstream, <a href="https://github.com/stephanstapel/ZUGFeRD-csharp/pull/981">PR #981</a> open (not ours)</td>
+</tr>
+</tbody>
+</table>
+<p>Full per-version history with dates: <a href="https://github.com/kobima6813/einvoice-conformance-matrix/blob/main/results/history/version_history.json"><code>results/history/version_history.json</code></a> (also <a href="https://github.com/kobima6813/einvoice-conformance-matrix/blob/main/results/history/version_history.csv">CSV</a>).</p>
+<h2>Matrix results by generator</h2>
+<table>
+<thead>
+<tr>
+<th>Generator / configuration</th>
+<th>Invoices</th>
+<th>Validator result</th>
+<th>Amount due ≠ order total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drafthorse 2025.2.0 (EN16931 CII)</td>
+<td>600</td>
+<td>all pass</td>
+<td>0</td>
+</tr>
+<tr>
+<td>akretion factur-x 7.7 (FR, Factur-X PDF round trip)</td>
+<td>600</td>
+<td>all pass</td>
+<td>0</td>
+</tr>
+<tr>
+<td>horstoeko/zugferd (EN16931)</td>
+<td>600</td>
+<td>all pass</td>
+<td>0</td>
+</tr>
+<tr>
+<td>num-num/ubl-invoice 2.4.1 (Peppol BIS 3, BE parties)</td>
+<td>600</td>
+<td>all pass</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ZUGFeRD-csharp 18.0.1 UBL, and CII with BT-72</td>
+<td>1,200</td>
+<td>all pass</td>
+<td>0</td>
+</tr>
+<tr>
+<td>ZUGFeRD-csharp 18.0.1 CII without BT-72</td>
+<td>600</td>
+<td>600 XSD-invalid</td>
+<td>0</td>
+</tr>
+<tr>
+<td>speedata 0.0.23 (CII, UBL)</td>
+<td>1,200</td>
+<td>all pass</td>
+<td>944</td>
+</tr>
+<tr>
+<td>Mustang 2.26.0 (library totals)</td>
+<td>600</td>
+<td>all pass</td>
+<td>472</td>
+</tr>
+<tr>
+<td>josemmo 0.3.1 default / round2</td>
+<td>1,200</td>
+<td>590 CEN fail / all pass</td>
+<td>597 / 472</td>
+</tr>
+<tr>
+<td>Odoo 19 XRechnung, Peppol BIS 3 (4 configs)</td>
+<td>2,400</td>
+<td>all pass</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Odoo 19 Factur-X <code>round_globally</code></td>
+<td>600</td>
+<td>226 CEN fail, 242 Peppol R120 fail</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Odoo 19 Factur-X <code>round_per_line</code></td>
+<td>600</td>
+<td>242 Peppol R120 fail</td>
+<td>0</td>
+</tr>
+<tr>
+<td>WooCommerce PDF Invoices 5.16.4 Factur-X (2 settings)</td>
+<td>1,200</td>
+<td>476 XSD-invalid</td>
+<td>0</td>
+</tr>
+<tr>
+<td>WooCommerce PDF Invoices 5.16.4 Peppol BIS 3 (2 settings)</td>
+<td>1,200</td>
+<td>all pass</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Source: <a href="https://github.com/kobima6813/einvoice-conformance-matrix/blob/main/results/matrix.csv"><code>results/matrix.csv</code></a>, <a href="https://github.com/kobima6813/einvoice-conformance-matrix/blob/main/results/matrix_totals.json"><code>results/matrix_totals.json</code></a>.</p>
+<h2>France: new Factur-X scenarios</h2>
+<p>France's receiving obligation and the issuing obligation for large and mid-size companies started on 1 Sep 2026, through approved platforms; accepted formats are UBL, CII and Factur-X. We added 5 French scenarios (<a href="https://github.com/kobima6813/einvoice-conformance-matrix/blob/main/scenarios/fr/scenarios.json"><code>scenarios/fr/scenarios.json</code></a>):</p>
+<ol>
+<li>Standard 20 % + 5.5 % VAT</li>
+<li>VAT franchise ("TVA non applicable, art. 293 B du CGI", category E, code VATEX-FR-FRANCHISE)</li>
+<li>Domestic reverse charge (autoliquidation, category AE)</li>
+<li>Intra-EU supply to Germany (category K, art. 262 ter I CGI, delivery country and date)</li>
+<li>All four French rates: 20, 10, 5.5 and 2.1 %</li>
+</ol>
+<p>Each invoice carries the seller SIREN (BT-30, scheme 0002), SIRET (BT-29, scheme 0009), a SIREN-based electronic address (scheme 0225), the buyer SIREN, and header notes for late-payment penalties (PMT), the EUR 40 recovery fee (PMD) and the early-payment discount (AAB).</p>
+<p>Checks: Factur-X 1.09.2 XSD for the profile, CEN EN 16931 CII rules, the official Factur-X EXTENDED schematron for EXTENDED, KoSIT (EN16931 profile only, since KoSIT has no EXTENDED scenario), and our structural checks that each French field reaches the XML.</p>
+<table>
+<thead>
+<tr>
+<th>Generator</th>
+<th>EN16931</th>
+<th>EXTENDED</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drafthorse 2025.2.0 + factur-x 7.7 (PDF embed and read-back)</td>
+<td>5/5 pass</td>
+<td>5/5 pass</td>
+</tr>
+<tr>
+<td>horstoeko/zugferd 1.0.132</td>
+<td>5/5 pass</td>
+<td>5/5 pass</td>
+</tr>
+<tr>
+<td>horstoeko/zugferd 1.0.133</td>
+<td>5/5 pass</td>
+<td>5/5 pass</td>
+</tr>
+</tbody>
+</table>
+<p>Notes:
+- With horstoeko, the ship-to address (needed for BR-IC-12 on intra-EU invoices) is silently dropped unless <code>setDocumentShipTo()</code> is called before <code>setDocumentShipToAddress()</code>. Our first driver did this and produced a BR-IC-12 failure; that was our usage error, not a library bug.
+- horstoeko 1.0.132 passes these scenarios because we pass the exemption reason text explicitly; issue #390 (fixed in 1.0.133) was in the <code>ZugferdQuickDescriptor</code> helper, while our driver uses <code>ZugferdDocumentBuilder</code> with the reason text set explicitly.
+- We have not yet tested the French platform-specific (PA/PPF) rule sets, since they are not available as free, pinned validators. Results: <a href="https://github.com/kobima6813/einvoice-conformance-matrix/blob/main/results/fr/fr_results.json"><code>results/fr/fr_results.json</code></a>.</p>
+<h2>Regulatory calendar</h2>
+<table>
+<thead>
+<tr>
+<th>Country</th>
+<th>Obligation</th>
+<th>Date</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Belgium</td>
+<td>B2B structured e-invoicing (EN 16931 / Peppol) mandatory; tolerance period ended 31 Mar 2026</td>
+<td>1 Jan 2026</td>
+<td><a href="https://ec.europa.eu/digital-building-blocks/sites/spaces/einvoicingCFS/pages/956171273/2026+Belgium+2026+eInvoicing+Country+Sheet">EC eInvoicing country sheet, Belgium 2026</a></td>
+</tr>
+<tr>
+<td>France</td>
+<td>All companies must receive e-invoices; large and mid-size companies must issue</td>
+<td>1 Sep 2026</td>
+<td><a href="https://entreprendre.service-public.gouv.fr/actualites/A15683?lang=en">service-public.gouv.fr</a></td>
+</tr>
+<tr>
+<td>France</td>
+<td>SMEs and micro-companies must issue</td>
+<td>1 Sep 2027</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>Receiving required since 1 Jan 2025; issuing mandatory for prior-year turnover &gt; EUR 800k</td>
+<td>1 Jan 2027</td>
+<td><a href="https://www.bundesfinanzministerium.de/Content/DE/FAQ/e-rechnung.html">BMF FAQ e-Rechnung</a></td>
+</tr>
+<tr>
+<td>Germany</td>
+<td>Issuing mandatory for all B2B</td>
+<td>1 Jan 2028</td>
+<td>same</td>
+</tr>
+<tr>
+<td>EU (ViDA)</td>
+<td>Intra-EU B2B e-invoicing and digital reporting</td>
+<td>1 Jul 2030</td>
+<td><a href="https://taxation-customs.ec.europa.eu/taxation/vat/vat-digital-age-vida_en">European Commission, VAT in the Digital Age</a></td>
+</tr>
+</tbody>
+</table>
+<h2>Method</h2>
+<p>Deterministic corpus of 600 synthetic orders (tax-inclusive shop carts with % discounts and shipping), generated per library with the library's own API. Validators are pinned by SHA-256 in <a href="https://github.com/kobima6813/einvoice-conformance-matrix/blob/main/validators/pins.txt"><code>validators/pins.txt</code></a>. Reproduce with <code>scripts/run_matrix.sh</code> and <code>scenarios/fr/run_fr.sh</code>. Corrections: see CONTRIBUTING.md.</p>
+</article></div></main><footer class="foot"><div class="wrap fg"><div><p class="brand2">E-Invoice Conformance Lab</p><p>Independent open-source project. Not affiliated with KoSIT, CEN, OpenPeppol, WooCommerce, WP Overnight, Odoo or any vendor listed. Results describe the listed versions only; a pass means the listed validators accepted the documents at test time. Not legal or tax advice. Code and data: Apache-2.0.</p></div><div><p class="fh">Contact</p><p><a href="mailto:conformance@mail.grokbot.com">conformance@mail.grokbot.com</a><br><a href="https://github.com/kobima6813/einvoice-conformance-matrix">GitHub</a> · <a href="https://github.com/kobima6813/einvoice-conformance-matrix#use-the-github-action-on-your-own-invoices">GitHub Action</a></p></div></div></footer></body></html>
