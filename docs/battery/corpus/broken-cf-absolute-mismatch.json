@@ -1,0 +1,309 @@
+{
+ "dataCarrier": "https://id.example-batteries.eu/01/04012345000016/21/EVP0001234",
+ "generalProductInformation": {
+  "productIdentifier": "(01)04012345000016(21)EVP0001234",
+  "batteryPassportIdentifier": "urn:exampleoem:evp0001234",
+  "batteryCategory": "ev",
+  "manufacturerInformation": {
+   "contactName": "Example Cells GmbH",
+   "identifier": "DE123456789",
+   "emailAddress": "passport@example-batteries.eu",
+   "webAddress": "https://example-batteries.eu",
+   "postalAddress": {
+    "addressCountry": "DE",
+    "streetAddress": "Musterstr. 1",
+    "postalCode": "10115"
+   }
+  },
+  "operatorInformation": {
+   "contactName": "Example Cells GmbH",
+   "identifier": "DE123456789",
+   "emailAddress": "passport@example-batteries.eu",
+   "webAddress": "https://example-batteries.eu",
+   "postalAddress": {
+    "addressCountry": "DE",
+    "streetAddress": "Musterstr. 1",
+    "postalCode": "10115"
+   }
+  },
+  "manufacturingDate": "2026-06-02T08:00:00+02:00",
+  "manufacturingPlace": {
+   "addressCountry": "DE",
+   "streetAddress": "Werkstr. 5",
+   "postalCode": "01099"
+  },
+  "batteryStatus": "Original",
+  "batteryMass": 450,
+  "puttingIntoService": "2026-08-15T09:00:00+02:00",
+  "warrentyPeriod": "--08"
+ },
+ "carbonFootprint": {
+  "batteryCarbonFootprint": 0.065,
+  "carbonFootprintPerLifecycleStage": [
+   {
+    "lifecycleStage": "RawMaterialExtraction",
+    "carbonFootprint": 0.04
+   },
+   {
+    "lifecycleStage": "MainProduction",
+    "carbonFootprint": 0.02
+   },
+   {
+    "lifecycleStage": "Distribution",
+    "carbonFootprint": 0.002
+   },
+   {
+    "lifecycleStage": "Recycling",
+    "carbonFootprint": 0.003
+   }
+  ],
+  "carbonFootprintPerformanceClass": "B",
+  "carbonFootprintStudy": "https://example-batteries.eu/cfp/evp-75.pdf",
+  "absoluteCarbonFootprint": 2000
+ },
+ "circularity": {
+  "renewableContent": 4,
+  "recycledContent": [
+   {
+    "recycledMaterial": "Cobalt",
+    "preConsumerShare": 10,
+    "postConsumerShare": 6
+   },
+   {
+    "recycledMaterial": "Nickel",
+    "preConsumerShare": 3,
+    "postConsumerShare": 2
+   },
+   {
+    "recycledMaterial": "Lithium",
+    "preConsumerShare": 2,
+    "postConsumerShare": 1
+   }
+  ],
+  "dismantlingAndRemovalInformation": [
+   {
+    "documentType": "DismantlingManual",
+    "mimeType": "application/pdf",
+    "documentURL": "https://example-batteries.eu/docs/dismantling.pdf"
+   }
+  ],
+  "sparePartSources": [
+   {
+    "nameOfSupplier": "Example Parts BV",
+    "addressOfSupplier": {
+     "addressCountry": "NL",
+     "streetAddress": "Kade 2",
+     "postalCode": "1011AA"
+    },
+    "emailAddressOfSupplier": "parts@example-parts.eu",
+    "supplierWebAddress": "https://example-parts.eu",
+    "components": [
+     {
+      "partName": "Module",
+      "partNumber": "MOD-12"
+     }
+    ]
+   }
+  ],
+  "safetyMeasures": {
+   "safetyInstructions": "https://example-batteries.eu/docs/safety.pdf",
+   "extinguishingAgent": [
+    "Water"
+   ]
+  },
+  "endOfLifeInformation": {
+   "wastePrevention": "https://example-batteries.eu/eol/prevention",
+   "separateCollection": "https://example-batteries.eu/eol/collection",
+   "informationOnCollection": "https://example-batteries.eu/eol/points"
+  }
+ },
+ "materialComposition": {
+  "batteryChemistry": {
+   "shortName": "NMC",
+   "clearName": "Lithium nickel manganese cobalt oxide"
+  },
+  "batteryMaterials": [
+   {
+    "batteryMaterialName": "Lithium",
+    "batteryMaterialIdentifier": "7439-93-2",
+    "batteryMaterialMass": 7.5,
+    "isCriticalRawMaterial": true,
+    "batteryMaterialLocation": {
+     "componentName": "Cathode"
+    }
+   },
+   {
+    "batteryMaterialName": "Nickel",
+    "batteryMaterialIdentifier": "7440-02-0",
+    "batteryMaterialMass": 38,
+    "isCriticalRawMaterial": true,
+    "batteryMaterialLocation": {
+     "componentName": "Cathode"
+    }
+   },
+   {
+    "batteryMaterialName": "Manganese",
+    "batteryMaterialIdentifier": "7439-96-5",
+    "batteryMaterialMass": 5,
+    "isCriticalRawMaterial": true,
+    "batteryMaterialLocation": {
+     "componentName": "Cathode"
+    }
+   },
+   {
+    "batteryMaterialName": "Cobalt",
+    "batteryMaterialIdentifier": "7440-48-4",
+    "batteryMaterialMass": 5,
+    "isCriticalRawMaterial": true,
+    "batteryMaterialLocation": {
+     "componentName": "Cathode"
+    }
+   },
+   {
+    "batteryMaterialName": "Graphite",
+    "batteryMaterialIdentifier": "7782-42-5",
+    "batteryMaterialMass": 55,
+    "isCriticalRawMaterial": true,
+    "batteryMaterialLocation": {
+     "componentName": "Anode"
+    }
+   }
+  ],
+  "hazardousSubstances": [
+   {
+    "hazardousSubstanceClass": "AcuteToxicity",
+    "hazardousSubstanceName": "Lithium hexafluorophosphate",
+    "hazardousSubstanceIdentifier": "21324-40-3",
+    "hazardousSubstanceConcentration": 1.2,
+    "hazardousSubstanceImpact": [
+     "Toxic if swallowed"
+    ],
+    "hazardousSubstanceLocation": {
+     "componentName": "Electrolyte"
+    }
+   }
+  ]
+ },
+ "performance": {
+  "batteryTechicalProperties": {
+   "ratedCapacity": 200,
+   "nominalVoltage": 375,
+   "minimumVoltage": 300,
+   "maximumVoltage": 420,
+   "ratedEnergy": 75,
+   "originalPowerCapability": [
+    {
+     "atSoC": 80,
+     "powerCapabilityAt": 250
+    },
+    {
+     "atSoC": 20,
+     "powerCapabilityAt": 180
+    }
+   ],
+   "ratedMaximumPower": 250,
+   "powerCapabilityRatio": 3.33,
+   "expectedNumberOfCycles": 1500,
+   "expectedLifetime": 10,
+   "initialSelfDischarge": 2,
+   "roundtripEfficiency": 95,
+   "initialInternalResistance": [
+    {
+     "ohmicResistance": 0.08,
+     "batteryComponent": "pack"
+    }
+   ],
+   "cRate": 1,
+   "capacityThresholdForExhaustion": 70,
+   "lifetimeReferenceTest": "https://example-batteries.eu/docs/lifetime-test.pdf",
+   "cRateLifeCycleTest": 0.33,
+   "temperatureRangeIdleState": 45
+  },
+  "batteryCondition": {
+   "energyThroughput": 1200,
+   "capacityThroughput": {
+    "capacityThroughputValue": 3200,
+    "lastUpdate": "2026-09-30T10:00:00+02:00"
+   },
+   "numberOfFullCycles": {
+    "numberOfFullCyclesValue": 16,
+    "lastUpdate": "2026-09-30T10:00:00+02:00"
+   },
+   "stateOfCertifiedEnergy": {
+    "stateOfCertifiedEnergyValue": 99,
+    "lastUpdate": "2026-09-30T10:00:00+02:00"
+   },
+   "capacityFade": {
+    "capacityFadeValue": 1,
+    "lastUpdate": "2026-09-30T10:00:00+02:00"
+   },
+   "remainingEnergy": {
+    "remainingEnergyalue": 74,
+    "lastUpdate": "2026-09-30T10:00:00+02:00"
+   },
+   "remainingCapacity": {
+    "remainingCapacityValue": 198,
+    "lastUpdate": "2026-09-30T10:00:00+02:00"
+   },
+   "negativeEvents": [],
+   "temperatureInformation": {
+    "timeExtremeHighTemp": 0,
+    "timeExtremeLowTemp": 0,
+    "timeExtremeHighTempCharging": 0,
+    "timeExtremeLowTempCharging": 0,
+    "lastUpdate": "2026-09-30T10:00:00+02:00"
+   },
+   "remainingPowerCapability": [
+    {
+     "remainingPowerCapabilityValue": {
+      "atSoC": 80,
+      "powerCapabilityAt": 248,
+      "rPCLastUpdated": "2026-09-30T10:00:00+02:00"
+     },
+     "lastUpdate": "2026-09-30T10:00:00+02:00"
+    }
+   ],
+   "powerFade": 1,
+   "roundTripEfficiencyFade": 0.2,
+   "evolutionOfSelfDischarge": {
+    "evolutionOfSelfDischargeEntityValue": 0
+   },
+   "currentSelfDischargingRate": {
+    "currentSelfDischargingRateEntity": 2,
+    "lastUpdate": "2026-09-30T10:00:00+02:00"
+   },
+   "internalResistanceIncrease": [
+    {
+     "internalResistanceIncreaseValue": 1,
+     "batteryComponent": "pack",
+     "lastUpdate": "2026-09-30T10:00:00+02:00"
+    }
+   ],
+   "roundTripEfficiencyat50PerCentCycleLife": 93,
+   "remainingRoundTripEnergyEfficiency": {
+    "remainingRoundTripEnergyEfficiencyValue": 94.8,
+    "lastUpdate": "2026-09-30T10:00:00+02:00"
+   },
+   "stateOfCharge": {
+    "stateOfChargeValue": 60,
+    "lastUpdate": "2026-09-30T10:00:00+02:00"
+   }
+  }
+ },
+ "supplyChainDueDiligence": {
+  "supplyChainDueDiligenceReport": "https://example-batteries.eu/dd/report-2026.pdf"
+ },
+ "labels": {
+  "declarationOfConformity": "https://example-batteries.eu/doc/eu-doc.pdf",
+  "resultOfTestReport": "https://example-batteries.eu/doc/tests.pdf",
+  "labels": [
+   {
+    "labelingSubject": "SeparateCollection",
+    "labelingSymbol": "https://example-batteries.eu/img/bin.svg",
+    "labelingMeaning": {
+     "en": "Separate collection"
+    }
+   }
+  ]
+ }
+}

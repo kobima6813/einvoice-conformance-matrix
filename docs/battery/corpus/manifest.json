@@ -1,0 +1,173 @@
+{
+ "valid": [
+  "valid-ev-nmc.json",
+  "valid-lmt-lfp.json"
+ ],
+ "broken": [
+  {
+   "file": "broken-cf-stages-dont-sum.json",
+   "expect": "BP-CF-02",
+   "what": "Lifecycle stages add up to 0.085 but declared total is 0.065"
+  },
+  {
+   "file": "broken-cf-absolute-mismatch.json",
+   "expect": "BP-CF-03",
+   "what": "Absolute footprint 2 t does not match 0.065 kg/kWh x lifetime energy"
+  },
+  {
+   "file": "broken-cf-per-rated-kwh.json",
+   "expect": "BP-CF-04",
+   "what": "Footprint declared per kWh of rated energy (78 kg/kWh) instead of per kWh delivered over life"
+  },
+  {
+   "file": "broken-recycled-over-100.json",
+   "expect": "BP-RC-01",
+   "what": "Cobalt pre- + post-consumer recycled share = 120 %"
+  },
+  {
+   "file": "broken-recycled-out-of-range.json",
+   "expect": "SCHEMA",
+   "what": "Recycled share 140 % (schema range 0-100)"
+  },
+  {
+   "file": "broken-recycled-duplicate-material.json",
+   "expect": "BP-RC-02",
+   "what": "Cobalt listed twice in recycled content"
+  },
+  {
+   "file": "broken-missing-manufacturer.json",
+   "expect": "SCHEMA",
+   "what": "Mandatory public field manufacturerInformation removed"
+  },
+  {
+   "file": "broken-missing-chemistry.json",
+   "expect": "SCHEMA",
+   "what": "Mandatory public field batteryChemistry removed"
+  },
+  {
+   "file": "broken-energy-in-wh.json",
+   "expect": "BP-PF-02",
+   "what": "Rated energy given in Wh (75000) where the model expects kWh"
+  },
+  {
+   "file": "broken-capacity-voltage-energy-mismatch.json",
+   "expect": "BP-PF-01",
+   "what": "Rated energy 100 kWh but 200 Ah x 375 V = 75 kWh"
+  },
+  {
+   "file": "broken-voltage-order.json",
+   "expect": "BP-PF-03",
+   "what": "Minimum voltage above nominal voltage"
+  },
+  {
+   "file": "broken-manufactured-in-future.json",
+   "expect": "BP-GP-02",
+   "what": "Manufacturing date in 2031"
+  },
+  {
+   "file": "broken-service-before-manufacture.json",
+   "expect": "BP-GP-03",
+   "what": "Put into service before it was manufactured"
+  },
+  {
+   "file": "broken-cas-check-digit.json",
+   "expect": "BP-MC-01",
+   "what": "CAS number 7440-48-5 for cobalt has a wrong check digit (pattern still matches)"
+  },
+  {
+   "file": "broken-chemistry-without-lithium.json",
+   "expect": "BP-MC-02",
+   "what": "Chemistry NMC but no lithium/nickel/cobalt in material list"
+  },
+  {
+   "file": "broken-lfp-with-cobalt-recycled.json",
+   "expect": "BP-MC-03",
+   "what": "LFP battery declares recycled cobalt content"
+  },
+  {
+   "file": "broken-materials-heavier-than-battery.json",
+   "expect": "BP-MC-04",
+   "what": "Declared material masses (110.5 kg) exceed battery mass (50 kg)"
+  },
+  {
+   "file": "broken-hazardous-concentration-over-100.json",
+   "expect": "BP-MC-05",
+   "what": "Hazardous substance concentration 250 %"
+  },
+  {
+   "file": "broken-passport-id-malformed.json",
+   "expect": "SCHEMA",
+   "what": "batteryPassportIdentifier is not a URN"
+  },
+  {
+   "file": "broken-bad-category.json",
+   "expect": "SCHEMA",
+   "what": "batteryCategory 'car' not in lmt/ev/industrial/stationary"
+  },
+  {
+   "file": "broken-gtin-check-digit.json",
+   "expect": "BP-DL-02",
+   "what": "GS1 Digital Link GTIN check digit wrong"
+  },
+  {
+   "file": "broken-dl-not-https.json",
+   "expect": "BP-DL-01",
+   "what": "Data carrier URL is not an https Digital Link URI"
+  },
+  {
+   "file": "broken-dl-no-serial.json",
+   "expect": "BP-DL-03",
+   "what": "Digital Link identifies the model only (no /21/ serial) - passport is per battery"
+  },
+  {
+   "file": "broken-dl-mismatch-product-id.json",
+   "expect": "BP-DL-05",
+   "what": "Digital Link serial differs from productIdentifier"
+  },
+  {
+   "file": "broken-dl-bad-serial-chars.json",
+   "expect": "BP-DL-04",
+   "what": "Serial contains characters outside GS1 AI set 82"
+  },
+  {
+   "file": "broken-remaining-capacity-above-rated.json",
+   "expect": "BP-PF-05",
+   "what": "Remaining capacity 230 Ah above rated 200 Ah"
+  },
+  {
+   "file": "broken-soc-over-100.json",
+   "expect": "BP-PF-04",
+   "what": "State of charge 160 %"
+  },
+  {
+   "file": "broken-lastupdate-in-future.json",
+   "expect": "BP-GP-04",
+   "what": "Dynamic data lastUpdate in 2030"
+  },
+  {
+   "file": "broken-industrial-under-2kwh.json",
+   "expect": "BP-GP-05",
+   "what": "Industrial battery of 0.96 kWh: Art. 77 passport only applies above 2 kWh"
+  },
+  {
+   "file": "broken-renewable-over-100.json",
+   "expect": "BP-RC-03",
+   "what": "Renewable content 130 %"
+  },
+  {
+   "file": "broken-cf-class-not-letter.json",
+   "expect": "BP-CF-05",
+   "what": "Performance class 'excellent' instead of a class letter"
+  },
+  {
+   "file": "broken-cf-missing-stage.json",
+   "expect": "BP-CF-01",
+   "what": "Lifecycle stage 'Recycling' missing"
+  },
+  {
+   "file": "broken-bad-email.json",
+   "expect": "BP-GP-06",
+   "what": "Manufacturer e-mail not an address"
+  }
+ ]
+}

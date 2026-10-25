@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><title>battery self-test</title><body><pre id="o">running</pre>
+<script src="bp-schemas.js"></script><script src="../batterycheck.js"></script>
+<script>
+(async()=>{const NOW='2026-10-25T12:00:00Z';const m=await (await fetch('corpus/manifest.json')).json();const L=[];let pass=0,fail=0;
+for(const f of m.valid){const r=bpCheck(await (await fetch('corpus/'+f)).text(),'',NOW);const ok=r.errors===0&&r.warnings===0;ok?pass++:fail++;L.push((ok?'PASS ':'FAIL ')+f+' errors='+r.errors+' warnings='+r.warnings+' checks='+r.n+' failed='+r.failed.join(','))}
+for(const b of m.broken){const r=bpCheck(await (await fetch('corpus/'+b.file)).text(),'',NOW);const ok=r.failed.includes(b.expect);ok?pass++:fail++;L.push((ok?'PASS ':'FAIL ')+b.file+' expect='+b.expect+' got='+r.failed.join(',')+' e='+r.errors+' w='+r.warnings)}
+L.push('TOTAL pass='+pass+' fail='+fail);document.getElementById('o').textContent=L.join('\n')})();
+</script>

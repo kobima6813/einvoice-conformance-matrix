@@ -31,3 +31,7 @@ repository's license.
 The driver scripts in `generators/woocommerce` and `generators/odoo` run inside the respective
 applications and call their public APIs. They are licensed under Apache-2.0, which is compatible with GPL-3.0
 and LGPL-3.0.
+
+## Battery Pass Data Model v1.2.0 (battery passport self-check)
+
+`docs/battery/bp-schemas.js` and `docs/battery/schemas-batterypass-1.2.0.json` contain structural constraints (property names, required lists, types, enums, patterns, ranges) extracted from the JSON schemas in https://github.com/batterypass/BatteryPassDataModel (Battery Pass Consortium, funded by the German Federal Ministry for Economic Affairs and Climate Action). Descriptions were removed and one broken e-mail pattern was dropped. The repository README licenses the work under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/); note that some schema description texts (removed here) mention CC BY-NC 4.0. Attribution: "Battery Pass Data Model v1.2.0, Battery Pass Consortium, CC BY 4.0", modified.
