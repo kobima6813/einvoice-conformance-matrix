@@ -4,12 +4,15 @@
  "invoices": 16200,
  "configurations": 27,
  "generators": 14,
- "validator_clean_configs": 20,
+ "validator_clean_configs": 21,
  "validator_clean_but_due_ne_order": {
   "josemmo0.3.1-xrechnung-round2": 472,
   "mustang2.26.0-auto-totals-xrechnung": 472,
   "speedata0.0.23-xrechnung-cii": 472,
-  "speedata0.0.23-xrechnung-ubl": 472
+  "speedata0.0.23-xrechnung-ubl": 472,
+  "en16931py0.2-peppolbis3-docdiscount": 494,
+  "gobl0.510.0-cii0.80.0-en16931": 22,
+  "gobl0.510.0-ubl0.97.0-peppolbis3": 22
  },
  "fr_scenarios": {
   "invoices": 30,
@@ -20,5 +23,6 @@
   "results/fr/fr_results.json",
   "results/history/version_history.json"
  ],
- "validator_clean_but_due_ne_order_note": "en16931py0.2-peppolbis3-docdiscount is not validator-clean (Peppol R003/R005); due != order on 494/600, of which 138 are multi-rate discounted carts with misallocated VAT"
+ "validator_clean_but_due_ne_order_note": "en16931py0.2-peppolbis3-docdiscount is clean under the matrix definition but fails full Peppol BIS R003/R005 on 600/600 (not a matrix column); 138 of its 494 due != order cases are multi-rate discounted carts with misallocated VAT",
+ "validator_clean_definition": "both segments: KoSIT accept or no applicable scenario for every file, 0 XSD invalid, 0 CEN calc fail, 0 Peppol R120 fail (results/matrix.csv columns)"
 }
