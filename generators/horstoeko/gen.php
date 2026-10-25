@@ -1,5 +1,5 @@
 <?php
-// horstoeko/zugferd 1.0.132 driver: writes the reference EN 16931 totals (library computes no totals).
+// horstoeko/zugferd 1.0.133 driver: writes the reference EN 16931 totals (library computes no totals).
 // usage: php gen.php <corpus_dir>/ref_en16931_rounding.json <out_dir>
 require __DIR__.'/vendor/autoload.php';
 use horstoeko\zugferd\ZugferdDocumentBuilder; use horstoeko\zugferd\ZugferdProfiles;
@@ -22,6 +22,6 @@ foreach($R as $c){
   foreach(($l['allow']??[]) as $a) $d->addDocumentPositionAllowanceCharge((float)$a,false,null,null,"95","Rabatt");
   $d->setDocumentPositionLineSummation((float)$l['line_net']);
  }
- file_put_contents($argv[2]."/horstoeko-zugferd1.0.132-en16931+ref-totals__".$c["id"].".xml",$d->getContent());
+ file_put_contents($argv[2]."/horstoeko-zugferd1.0.133-en16931+ref-totals__".$c["id"].".xml",$d->getContent());
 }
 echo "ok\n";

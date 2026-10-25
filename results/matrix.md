@@ -4,8 +4,8 @@
 | drafthorse2025.2.0-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | facturx7.7-fr-en16931+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | facturx7.7-fr-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| horstoeko-zugferd1.0.132-en16931+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| horstoeko-zugferd1.0.132-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| horstoeko-zugferd1.0.133-en16931+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| horstoeko-zugferd1.0.133-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | josemmo0.3.1-xrechnung-default | b2b | 300 | 1.7 | 0.0 | 0.0 | 98.0 | 0.0 | 99.7 | 99.7 |
 | josemmo0.3.1-xrechnung-default | b2c | 300 | 0.7 | 0.0 | 0.0 | 98.7 | 0.0 | 99.3 | 99.3 |
 | josemmo0.3.1-xrechnung-round2 | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 90.7 | 90.7 |

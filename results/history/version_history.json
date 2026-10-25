@@ -1,5 +1,5 @@
 {
- "_doc": "Per-version history: which library version/config failed or passed which rule, and when. Matrix rows = 600 synthetic orders each (date = date the row was added to the matrix, from git history). Upstream transitions: dates are UTC from the GitHub API, checked 2026-10-25. Note: generators/horstoeko/composer.json now pins 1.0.133 while the matrix tag still reads 1.0.132.",
+ "_doc": "Per-version history: which library version/config failed or passed which rule, and when. Matrix rows = 600 synthetic orders each (date = date the row was added to the matrix, from git history). Upstream transitions: dates are UTC from the GitHub API, checked 2026-10-25. The horstoeko matrix row is labelled 1.0.133: the generator pin was bumped and re-run on 2026-10-21 (600/600 outputs identical to 1.0.132).",
  "matrix_and_scenarios": [
   {
    "library": "pretix/python-drafthorse",
@@ -102,8 +102,158 @@
    "source": "results/matrix_totals.json"
   },
   {
+   "library": "easybill/zugferd-php",
+   "version_config": "easybill-zugferd6.0.0-xrechnung+ref-totals",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "easybill/zugferd-php",
+   "version_config": "easybill-zugferd6.0.0-xrechnung+ref-totals",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "easybill/zugferd-php",
+   "version_config": "easybill-zugferd6.0.0-xrechnung+ref-totals",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "easybill/zugferd-php",
+   "version_config": "easybill-zugferd6.0.0-xrechnung+ref-totals",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "easybill/zugferd-php",
+   "version_config": "easybill-zugferd6.0.0-xrechnung+ref-totals",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invopop/gobl",
+   "version_config": "gobl0.510.0-cii0.80.0-en16931",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invopop/gobl",
+   "version_config": "gobl0.510.0-cii0.80.0-en16931",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invopop/gobl",
+   "version_config": "gobl0.510.0-cii0.80.0-en16931",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invopop/gobl",
+   "version_config": "gobl0.510.0-cii0.80.0-en16931",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "fail (22 coupon orders due +0.01 EUR vs charged; known rounding effect, not a validator error)",
+   "failing": 22,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invopop/gobl",
+   "version_config": "gobl0.510.0-cii0.80.0-en16931",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invopop/gobl",
+   "version_config": "gobl0.510.0-ubl0.97.0-peppolbis3",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invopop/gobl",
+   "version_config": "gobl0.510.0-ubl0.97.0-peppolbis3",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invopop/gobl",
+   "version_config": "gobl0.510.0-ubl0.97.0-peppolbis3",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invopop/gobl",
+   "version_config": "gobl0.510.0-ubl0.97.0-peppolbis3",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "fail (22 coupon orders due +0.01 EUR vs charged; known rounding effect, not a validator error)",
+   "failing": 22,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invopop/gobl",
+   "version_config": "gobl0.510.0-ubl0.97.0-peppolbis3",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "n/a (no KoSIT scenario for this format)",
+   "failing": null,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
    "library": "horstoeko/zugferd",
-   "version_config": "horstoeko-zugferd1.0.132-en16931+ref-totals",
+   "version_config": "horstoeko-zugferd1.0.133-en16931+ref-totals",
    "rule": "XSD",
    "result": "pass",
    "failing": 0,
@@ -113,7 +263,7 @@
   },
   {
    "library": "horstoeko/zugferd",
-   "version_config": "horstoeko-zugferd1.0.132-en16931+ref-totals",
+   "version_config": "horstoeko-zugferd1.0.133-en16931+ref-totals",
    "rule": "CEN EN16931 calculation rules (BR-CO-*)",
    "result": "pass",
    "failing": 0,
@@ -123,7 +273,7 @@
   },
   {
    "library": "horstoeko/zugferd",
-   "version_config": "horstoeko-zugferd1.0.132-en16931+ref-totals",
+   "version_config": "horstoeko-zugferd1.0.133-en16931+ref-totals",
    "rule": "PEPPOL-EN16931-R120",
    "result": "pass",
    "failing": 0,
@@ -133,7 +283,7 @@
   },
   {
    "library": "horstoeko/zugferd",
-   "version_config": "horstoeko-zugferd1.0.132-en16931+ref-totals",
+   "version_config": "horstoeko-zugferd1.0.133-en16931+ref-totals",
    "rule": "BT-115 amount due = order total (our check)",
    "result": "pass",
    "failing": 0,
@@ -143,7 +293,7 @@
   },
   {
    "library": "horstoeko/zugferd",
-   "version_config": "horstoeko-zugferd1.0.132-en16931+ref-totals",
+   "version_config": "horstoeko-zugferd1.0.133-en16931+ref-totals",
    "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
    "result": "pass",
    "failing": 0,
