@@ -4,8 +4,9 @@
 
 ## Summary
 
-- **13,200 synthetic invoices** from **10 open-source generators** (22 configurations × 600 orders: 300 B2B + 300 B2C) were checked against KoSIT 1.6.3 (XRechnung 3.0.2 configuration), the CEN EN 16931 rules and Peppol BIS 3.0.20. Source: [`results/matrix_totals.json`](../../results/matrix_totals.json).
-- **16 of 22 configurations** pass every validator that applies to them. **6** have validator failures: josemmo default config, Odoo 19 Factur-X (both rounding modes), WooCommerce PDF Invoices Factur-X (both settings), ZUGFeRD-csharp CII without a delivery date.
+- **Update 25 Oct 2026:** two generators were added after the first snapshot: easybill/zugferd-php 6.0.0 (XRechnung CII, 600/600 pass) and invopop/gobl 0.510.0 (CII + UBL, 1,200/1,200 pass; on 22/600 orders the amount due is €0.01 above the charged total). Totals below include them.
+- **15,000 synthetic invoices** from **12 open-source generators** (25 configurations × 600 orders: 300 B2B + 300 B2C) were checked against KoSIT 1.6.3 (XRechnung 3.0.2 configuration), the CEN EN 16931 rules and Peppol BIS 3.0.20. Source: [`results/matrix_totals.json`](../../results/matrix_totals.json).
+- **16 of 25 configurations** pass every validator that applies to them. **6** have validator failures: josemmo default config, Odoo 19 Factur-X (both rounding modes), WooCommerce PDF Invoices Factur-X (both settings), ZUGFeRD-csharp CII without a delivery date.
 - **Passing the validator is not enough:** 4 configurations that pass every validator still state an amount due (BT-115) that differs from what the order charged, on **472 of 600** invoices each (Mustang 2.26.0 library totals, speedata 0.0.23 CII and UBL, josemmo 0.3.1 with 2-decimal rounding). These are tax-inclusive shop orders converted to EN 16931 net arithmetic; no validator checks the original order total.
 - **New this month: French scenarios.** 5 French-mandate scenarios × 2 Factur-X profiles (EN16931, EXTENDED) × 3 generator versions = **30 invoices, 30 pass** (details below).
 
