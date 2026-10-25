@@ -31,7 +31,7 @@ All validator artefacts are downloaded at runtime from their official sources an
 > The corpus is **synthetic**: 600 generated tax-inclusive carts. No real orders, customers or personal data
 > are included. All names, addresses, VAT IDs and IBANs in the invoices are placeholder/test values.
 
-## Headline matrix (15,000 invoices)
+## Headline matrix (16,200 invoices)
 
 300 B2B + 300 B2C carts per generator configuration (German VAT 19 % / 7 %, percentage coupons, shipping).
 
@@ -58,6 +58,9 @@ All validator artefacts are downloaded at runtime from their official sources an
 | ZUGFeRD-csharp 18.0.1, XRechnung UBL, reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 | ZUGFeRD-csharp 18.0.1, XRechnung CII, no delivery date set | b2b / b2c | 0 | 0 | **100** | 0 | 0 | 0 |
 | ZUGFeRD-csharp 18.0.1, XRechnung CII, delivery date (BT-72) set | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
+| PyCheval 0.3.3, Factur-X EN 16931 (CII), reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
+| python-en16931 0.2, Peppol BIS 3 (UBL), totals computed by the library, coupon as document discount | b2b | n/a | 100 | 0 | 0 | 0 | **92.0** |
+| python-en16931 0.2, Peppol BIS 3 (UBL), totals computed by the library, coupon as document discount | b2c | n/a | 100 | 0 | 0 | 0 | **72.7** |
 | num-num/ubl-invoice 2.4.1, Peppol BIS 3 (UBL, Belgian parties), reference totals supplied | b2b / b2c | n/a | 100 | 0 | 0 | 0 | 0 |
 | akretion factur-x 7.7, Factur-X EN 16931 PDF (French parties), XML read back from the PDF, reference totals | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 | easybill/zugferd-php 6.0.0, XRechnung CII, reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |

@@ -2,8 +2,16 @@
 |---|---|---|---|---|---|---|---|---|---|
 | drafthorse2025.2.0-en16931+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | drafthorse2025.2.0-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| easybill-zugferd6.0.0-xrechnung+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| easybill-zugferd6.0.0-xrechnung+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| en16931py0.2-peppolbis3-docdiscount | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 92.0 | 92.0 |
+| en16931py0.2-peppolbis3-docdiscount | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 72.7 | 72.7 |
 | facturx7.7-fr-en16931+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | facturx7.7-fr-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| gobl0.510.0-cii0.80.0-en16931 | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 6.0 | 6.0 |
+| gobl0.510.0-cii0.80.0-en16931 | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.3 | 1.3 |
+| gobl0.510.0-ubl0.97.0-peppolbis3 | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 6.0 | 6.0 |
+| gobl0.510.0-ubl0.97.0-peppolbis3 | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 1.3 | 1.3 |
 | horstoeko-zugferd1.0.133-en16931+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | horstoeko-zugferd1.0.133-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | josemmo0.3.1-xrechnung-default | b2b | 300 | 1.7 | 0.0 | 0.0 | 98.0 | 0.0 | 99.7 | 99.7 |
@@ -26,6 +34,8 @@
 | odoo19-xr-round_globally | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.3 |
 | odoo19-xr-round_per_line | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 13.7 |
 | odoo19-xr-round_per_line | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 15.3 |
+| pycheval0.3.3-en16931+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| pycheval0.3.3-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | speedata0.0.23-xrechnung-cii | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 90.7 | 90.7 |
 | speedata0.0.23-xrechnung-cii | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
 | speedata0.0.23-xrechnung-ubl | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 90.7 | 90.7 |
@@ -44,9 +54,3 @@
 | zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | zugferdcs18.0.1-xrechnung-ubl+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | zugferdcs18.0.1-xrechnung-ubl+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| easybill-zugferd6.0.0-xrechnung+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| easybill-zugferd6.0.0-xrechnung+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| gobl0.510.0-cii0.80.0-en16931 | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 6.0 | 6.0 |
-| gobl0.510.0-cii0.80.0-en16931 | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.3 | 1.3 |
-| gobl0.510.0-ubl0.97.0-peppolbis3 | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 6.0 | 6.0 |
-| gobl0.510.0-ubl0.97.0-peppolbis3 | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 1.3 | 1.3 |

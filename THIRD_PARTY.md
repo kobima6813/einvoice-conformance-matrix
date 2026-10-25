@@ -16,6 +16,8 @@ artefact from its official source and verifies the SHA-256 in `validators/pins.t
 | Mustang (generator and optional validator) | 2.26.0 | github.com/ZUGFeRD/mustangproject | Apache-2.0 |
 | horstoeko/zugferd (generator) | 1.0.133 | Packagist | MIT |
 | drafthorse (generator) | 2025.2.0 | PyPI | Apache-2.0 |
+| PyCheval (generator) | 0.3.3 | PyPI | Apache-2.0 |
+| python-en16931 / `en16931` (generator) | 0.2 | PyPI | Apache-2.0 |
 | WordPress / WooCommerce / PDF Invoices & Packing Slips (generator) | 7.1.3 / 11.2.1 / 5.16.4 | wordpress.org | GPL-2.0+ / GPL-3.0 / GPL-3.0 |
 | Odoo Community (generator) | 19.0 @ 53ec5874 | github.com/odoo/odoo | LGPL-3.0 |
 

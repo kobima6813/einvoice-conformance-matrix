@@ -252,6 +252,116 @@
    "source": "results/matrix_totals.json"
   },
   {
+   "library": "zfutura/pycheval",
+   "version_config": "pycheval0.3.3-en16931+ref-totals",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "zfutura/pycheval",
+   "version_config": "pycheval0.3.3-en16931+ref-totals",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "zfutura/pycheval",
+   "version_config": "pycheval0.3.3-en16931+ref-totals",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "zfutura/pycheval",
+   "version_config": "pycheval0.3.3-en16931+ref-totals",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "zfutura/pycheval",
+   "version_config": "pycheval0.3.3-en16931+ref-totals",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invinet/python-en16931",
+   "version_config": "en16931py0.2-peppolbis3-docdiscount",
+   "rule": "XSD",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invinet/python-en16931",
+   "version_config": "en16931py0.2-peppolbis3-docdiscount",
+   "rule": "CEN EN16931 calculation rules (BR-CO-*)",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invinet/python-en16931",
+   "version_config": "en16931py0.2-peppolbis3-docdiscount",
+   "rule": "PEPPOL-EN16931-R120",
+   "result": "pass",
+   "failing": 0,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invinet/python-en16931",
+   "version_config": "en16931py0.2-peppolbis3-docdiscount",
+   "rule": "BT-115 amount due = order total (our check)",
+   "result": "fail (138 multi-rate coupon orders: whole document discount booked to first VAT rate, due EUR 0.42-535.50 too low; rest: net-price rounding as in other library-computed rows)",
+   "failing": 494,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invinet/python-en16931",
+   "version_config": "en16931py0.2-peppolbis3-docdiscount",
+   "rule": "KoSIT 1.6.3 (XRechnung 3.0.2 config)",
+   "result": "n/a (no KoSIT scenario for this format)",
+   "failing": null,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "results/matrix_totals.json"
+  },
+  {
+   "library": "invinet/python-en16931",
+   "version_config": "en16931py0.2-peppolbis3-docdiscount",
+   "rule": "Peppol BIS 3.0.20 fatal rules PEPPOL-EN16931-R003/R005/R054",
+   "result": "fail (template always writes TaxCurrencyCode, no BuyerReference)",
+   "failing": 600,
+   "of": 600,
+   "date_tested": "2026-10-25",
+   "source": "invoices/en16931py.tar.xz (oracle peppol_fails)"
+  },
+  {
    "library": "horstoeko/zugferd",
    "version_config": "horstoeko-zugferd1.0.133-en16931+ref-totals",
    "rule": "XSD",

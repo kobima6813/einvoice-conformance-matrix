@@ -1,10 +1,10 @@
 {
  "report": "State of EU e-invoice interoperability — October 2026",
  "as_of": "2026-10-25",
- "invoices": 15000,
- "configurations": 25,
- "generators": 12,
- "validator_clean_configs": 19,
+ "invoices": 16200,
+ "configurations": 27,
+ "generators": 14,
+ "validator_clean_configs": 20,
  "validator_clean_but_due_ne_order": {
   "josemmo0.3.1-xrechnung-round2": 472,
   "mustang2.26.0-auto-totals-xrechnung": 472,
@@ -19,5 +19,6 @@
   "results/matrix_totals.json",
   "results/fr/fr_results.json",
   "results/history/version_history.json"
- ]
+ ],
+ "validator_clean_but_due_ne_order_note": "en16931py0.2-peppolbis3-docdiscount is not validator-clean (Peppol R003/R005); due != order on 494/600, of which 138 are multi-rate discounted carts with misallocated VAT"
 }

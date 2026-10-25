@@ -10,6 +10,8 @@ function txt(doc,ctx,p){const n=all(doc,ctx,p)[0];return n?n.textContent.trim():
 function num(doc,ctx,p){const t=txt(doc,ctx,p);return t===''?null:Number(t)}
 function sum(doc,ctx,p){return all(doc,ctx,p).reduce((s,n)=>s+Number(n.textContent.trim()||0),0)}
 const r2=v=>Math.round(v*100)/100, eq=(a,b)=>Math.abs(r2(a)-r2(b))<0.005;
+function near(a,b){return Math.abs(a-b)<=0.0100001}
+function dec2(v){return Math.abs(v*100-Math.round(v*100))<1e-6}
 function check(xml){
   const doc=new DOMParser().parseFromString(xml,'application/xml');
   if(doc.getElementsByTagName('parsererror').length) return {syntax:'Not well-formed XML',out:[{f:true}],n:1};
@@ -35,6 +37,21 @@ function check(xml){
     if(ti!==null&&pa!==null) req(eq(pa,ti-pre+rnd),1);
     req(eq(vat,sum(doc,root,'cac:TaxTotal/cac:TaxSubtotal/cbc:TaxAmount')),1);
     req(all(doc,root,'cac:TaxTotal/cac:TaxSubtotal').length,1);
+    // added 2026-10: BR-CO-11/12, line net, per-rate basis (BR-S-08 family), VAT per rate, decimals, rounding
+    const alT=num(doc,root,lm+'cbc:AllowanceTotalAmount'),chT=num(doc,root,lm+'cbc:ChargeTotalAmount');
+    const dacs=all(doc,root,'cac:AllowanceCharge');
+    if(dacs.some(a=>txt(doc,a,'cbc:ChargeIndicator')==='false')||alT!==null) req(alT!==null&&eq(alT,al),1);
+    if(dacs.some(a=>txt(doc,a,'cbc:ChargeIndicator')==='true')||chT!==null) req(chT!==null&&eq(chT,ch),1);
+    const basis={},key=(c,r)=>c+'|'+Number(r||0);
+    lines.forEach(l=>{const q=num(doc,l,'cbc:'+Q),p=num(doc,l,'cac:Price/cbc:PriceAmount'),bq=num(doc,l,'cac:Price/cbc:BaseQuantity')||1,n=num(doc,l,'cbc:LineExtensionAmount');
+      const la=sum(doc,l,"cac:AllowanceCharge[cbc:ChargeIndicator='false']/cbc:Amount"),lc=sum(doc,l,"cac:AllowanceCharge[cbc:ChargeIndicator='true']/cbc:Amount");
+      if(q!==null&&p!==null&&n!==null) req(near(n,q*p/bq-la+lc),0);
+      const k=key(txt(doc,l,'cac:Item/cac:ClassifiedTaxCategory/cbc:ID'),txt(doc,l,'cac:Item/cac:ClassifiedTaxCategory/cbc:Percent'));basis[k]=(basis[k]||0)+(n||0)});
+    dacs.forEach(a=>{const c=all(doc,a,'cac:TaxCategory');req(c.length===1,1);if(c.length){const k=key(txt(doc,c[0],'cbc:ID'),txt(doc,c[0],'cbc:Percent'));basis[k]=(basis[k]||0)+(txt(doc,a,'cbc:ChargeIndicator')==='true'?1:-1)*num(doc,a,'cbc:Amount')}});
+    all(doc,root,'cac:TaxTotal/cac:TaxSubtotal').forEach(st=>{const k=key(txt(doc,st,'cac:TaxCategory/cbc:ID'),txt(doc,st,'cac:TaxCategory/cbc:Percent')),b=num(doc,st,'cbc:TaxableAmount'),v=num(doc,st,'cbc:TaxAmount'),r=Number(txt(doc,st,'cac:TaxCategory/cbc:Percent')||0);
+      req(b!==null&&eq(b,basis[k]||0),1); if(b!==null&&v!==null){req(Math.abs(v-b*r/100)<=1.0000001,1);req(near(v,b*r/100),0)}});
+    [lx,te,ti,pa,alT,chT].forEach(v=>{if(v!==null) req(dec2(v),1)});
+    req(Math.abs(rnd)<1,1);
     req(t('cbc:BuyerReference')||t('cac:OrderReference/cbc:ID'),0);
     req(t('cac:AccountingSupplierParty/cac:Party/cbc:EndpointID'),0);
   } else if(ns===NS.rsm&&root.localName==='CrossIndustryInvoice'){
@@ -55,6 +72,21 @@ function check(xml){
     if(ti!==null&&pa!==null) req(eq(pa,ti-pre+rnd),1);
     req(eq(vat,sum(doc,root,S+'ram:ApplicableTradeTax/ram:CalculatedAmount')),1);
     req(all(doc,root,S+'ram:ApplicableTradeTax').length,1);
+    // added 2026-10: BR-CO-11/12, line net, per-rate basis (BR-S-08 family), VAT per rate, decimals, rounding
+    const alT=num(doc,root,M+'ram:AllowanceTotalAmount'),chT=num(doc,root,M+'ram:ChargeTotalAmount');
+    const dacs=all(doc,root,S+'ram:SpecifiedTradeAllowanceCharge'),ci=a=>txt(doc,a,'ram:ChargeIndicator/udt:Indicator');
+    if(dacs.some(a=>ci(a)==='false')||alT!==null) req(alT!==null&&eq(alT,al),1);
+    if(dacs.some(a=>ci(a)==='true')||chT!==null) req(chT!==null&&eq(chT,ch),1);
+    const basis={},key=(c,r)=>c+'|'+Number(r||0);
+    lines.forEach(l=>{const q=num(doc,l,'ram:SpecifiedLineTradeDelivery/ram:BilledQuantity'),P='ram:SpecifiedLineTradeAgreement/ram:NetPriceProductTradePrice/',p=num(doc,l,P+'ram:ChargeAmount'),bq=num(doc,l,P+'ram:BasisQuantity')||1,LS='ram:SpecifiedLineTradeSettlement/',n=num(doc,l,LS+'ram:SpecifiedTradeSettlementLineMonetarySummation/ram:LineTotalAmount');
+      const la=sum(doc,l,LS+"ram:SpecifiedTradeAllowanceCharge[ram:ChargeIndicator/udt:Indicator='false']/ram:ActualAmount"),lc=sum(doc,l,LS+"ram:SpecifiedTradeAllowanceCharge[ram:ChargeIndicator/udt:Indicator='true']/ram:ActualAmount");
+      if(q!==null&&p!==null&&n!==null) req(near(n,q*p/bq-la+lc),0);
+      const k=key(txt(doc,l,LS+'ram:ApplicableTradeTax/ram:CategoryCode'),txt(doc,l,LS+'ram:ApplicableTradeTax/ram:RateApplicablePercent'));basis[k]=(basis[k]||0)+(n||0)});
+    dacs.forEach(a=>{const c=all(doc,a,'ram:CategoryTradeTax');req(c.length===1,1);if(c.length){const k=key(txt(doc,c[0],'ram:CategoryCode'),txt(doc,c[0],'ram:RateApplicablePercent'));basis[k]=(basis[k]||0)+(ci(a)==='true'?1:-1)*num(doc,a,'ram:ActualAmount')}});
+    all(doc,root,S+'ram:ApplicableTradeTax').forEach(st=>{const k=key(txt(doc,st,'ram:CategoryCode'),txt(doc,st,'ram:RateApplicablePercent')),b=num(doc,st,'ram:BasisAmount'),v=num(doc,st,'ram:CalculatedAmount'),r=Number(txt(doc,st,'ram:RateApplicablePercent')||0);
+      req(b!==null&&eq(b,basis[k]||0),1); if(b!==null&&v!==null){req(Math.abs(v-b*r/100)<=1.0000001,1);req(near(v,b*r/100),0)}});
+    [lx,te,ti,pa,alT,chT].forEach(v=>{if(v!==null) req(dec2(v),1)});
+    req(Math.abs(rnd)<1,1);
     req(t(A+'ram:BuyerReference')||t(A+'ram:BuyerOrderReferencedDocument/ram:IssuerAssignedID'),0);
     req(t(A+'ram:SellerTradeParty/ram:URIUniversalCommunication/ram:URIID'),0);
   } else return {syntax:'Not a UBL Invoice/CreditNote or CII CrossIndustryInvoice document',out:[{f:true}],n:1};
