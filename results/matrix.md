@@ -6,6 +6,10 @@
 | dealerweb-einvoice1.2.1-auto-totals-xrechnung | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
 | drafthorse2025.2.0-en16931+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | drafthorse2025.2.0-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| e-invoice-eu3.4.2-xrechnung-cii+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| e-invoice-eu3.4.2-xrechnung-cii+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| e-invoice-eu3.4.2-xrechnung-ubl+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| e-invoice-eu3.4.2-xrechnung-ubl+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | easybill-zugferd6.0.0-xrechnung+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | easybill-zugferd6.0.0-xrechnung+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | en16931py0.2-peppolbis3-docdiscount | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 92.0 | 92.0 |
@@ -24,6 +28,8 @@
 | josemmo0.3.1-xrechnung-round2 | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
 | mustang2.26.0-auto-totals-xrechnung | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 90.7 | 90.7 |
 | mustang2.26.0-auto-totals-xrechnung | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
+| node-zugferd0.1.1-beta.1-en16931+ref-totals | b2b | 152 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| node-zugferd0.1.1-beta.1-en16931+ref-totals | b2c | 146 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | numnum2.4.1-peppolbis3+ref-totals | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | numnum2.4.1-peppolbis3+ref-totals | b2c | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | odoo19-bis3-round_globally | b2b | 300 | 0.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 6.0 |

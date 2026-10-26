@@ -29,6 +29,26 @@
   "peppol_R120_fail": 0,
   "xsd_invalid": 0
  },
+ "e-invoice-eu3.4.2-xrechnung-cii+ref-totals": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 0,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "e-invoice-eu3.4.2-xrechnung-ubl+ref-totals": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 0,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
  "easybill-zugferd6.0.0-xrechnung+ref-totals": {
   "cen_calc_fail": 0,
   "due_ne_order": 0,
@@ -116,6 +136,16 @@
   "kosit_accept": 600,
   "kosit_nomatch": 0,
   "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "node-zugferd0.1.1-beta.1-en16931+ref-totals": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 0,
+  "due_ne_sim": 0,
+  "kosit_accept": 298,
+  "kosit_nomatch": 0,
+  "n": 298,
   "peppol_R120_fail": 0,
   "xsd_invalid": 0
  },

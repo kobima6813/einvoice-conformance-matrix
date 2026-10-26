@@ -31,7 +31,7 @@ All validator artefacts are downloaded at runtime from their official sources an
 > The corpus is **synthetic**: 600 generated tax-inclusive carts. No real orders, customers or personal data
 > are included. All names, addresses, VAT IDs and IBANs in the invoices are placeholder/test values.
 
-## Headline matrix (17,400 invoices)
+## Headline matrix (18,898 invoices)
 
 300 B2B + 300 B2C carts per generator configuration (German VAT 19 % / 7 %, percentage coupons, shipping).
 
@@ -62,6 +62,8 @@ All validator artefacts are downloaded at runtime from their official sources an
 | ZUGFeRD-csharp 18.0.1, XRechnung UBL, reference totals supplied (maintenance ends 30 Nov 2026) | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 | ZUGFeRD-csharp 18.0.1, XRechnung CII, no delivery date set (maintenance ends 30 Nov 2026) | b2b / b2c | 0 | 0 | **100** | 0 | 0 | 0 |
 | ZUGFeRD-csharp 18.0.1, XRechnung CII, delivery date (BT-72) set (maintenance ends 30 Nov 2026) | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
+| e-invoice-eu 3.4.2, XRechnung UBL and CII, reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
+| node-zugferd 0.1.1-beta.1, Factur-X EN 16931 (CII), reference totals supplied (298 of 600 carts generated, see notes) | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 | PyCheval 0.3.3, Factur-X EN 16931 (CII), reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 | python-en16931 0.2, Peppol BIS 3 (UBL), totals computed by the library, coupon as document discount | b2b | n/a | 100 | 0 | 0 | 0 | **92.0** |
 | python-en16931 0.2, Peppol BIS 3 (UBL), totals computed by the library, coupon as document discount | b2c | n/a | 100 | 0 | 0 | 0 | **72.7** |
@@ -102,9 +104,23 @@ What the numbers mean:
   totals themselves. Both pass every validator on all 600 orders, and their amount due equals Mustang's, speedata's and
   josemmo's (rounding preset) on every cart: the gap to the shop's charged total comes from EN 16931 line-level rounding of
   VAT-inclusive shop prices, not from any one library.
-* **Second validator:** every XRechnung invoice in the matrix (7,800 files, 13 configurations) was also checked with
-  [phive-rules](https://github.com/phax/phive-rules) 4.6.3 (XRechnung 3.0.2). Its accept/reject verdict matched KoSIT on all
-  of them, including the rejected ones ([`results/phive_vs_kosit.csv`](results/phive_vs_kosit.csv), `validators/phive/run_phive.sh`).
+* **e-invoice-eu 3.4.2** (added 26 Oct 2026, [gflohr/e-invoice-eu](https://github.com/gflohr/e-invoice-eu), Node/TypeScript)
+  maps a JSON invoice to XRechnung UBL or CII and computes no totals, so reference totals are supplied. All 1,200 invoices
+  (600 UBL + 600 CII) are KoSIT-acceptable, pass CEN EN 16931 and Peppol rules, and are valid in phive.
+* **node-zugferd 0.1.1-beta.1** (added 26 Oct 2026, [jslno/node-zugferd](https://github.com/jslno/node-zugferd), beta,
+  Factur-X EN 16931 profile) computes no totals, so reference totals are supplied. It produced invoices for 298 of the 600
+  carts (152 B2B, 146 B2C); all 298 are KoSIT-acceptable and valid in phive. For the other 302 carts, which are exactly the carts
+  with an invoice-line allowance (BG-27), `create(...).toXML()` throws: the library writes `ram:ActualAmount` before
+  `ram:ChargeIndicator` inside `ram:SpecifiedTradeAllowanceCharge`, which the CII XSD rejects, and its own schema check
+  then refuses the document. With this version a line-level discount cannot be expressed. This is already reported upstream
+  ([#116](https://github.com/jslno/node-zugferd/issues/116), open; not ours).
+* **Second validator:** every invoice in the matrix (18,898 files, 32 configurations) was also checked with
+  [phive-rules](https://github.com/phax/phive-rules) 4.6.3: XRechnung 3.0.2 for documents that declare an XRechnung
+  guideline (9,000 files, 15 configurations), plain EN 16931 1.3.16 (CII or UBL) for all others (9,898 files, 17 configurations).
+  For the 12,898 files for which KoSIT has a scenario, the phive verdict matched KoSIT on every file, including the rejected
+  ones. For the 6,000 files with no KoSIT scenario (Peppol BIS 3, Odoo Factur-X), phive EN 16931 is the only rule-set verdict;
+  it flags the same 226 Odoo `round_globally` Factur-X invoices (BR-S-08) as the CEN check
+  ([`results/phive_vs_kosit.csv`](results/phive_vs_kosit.csv), `validators/phive/run_phive.sh`).
 * **ZUGFeRD-csharp: end of maintenance.** The maintainer has announced that maintenance ends on **30 November 2026**; from
   1 December 2026 the NuGet packages are marked deprecated (Legacy) and the repository will be archived.
 * **ZUGFeRD-csharp 18.0.1** (added 23 Oct 2026) computes no document totals, so reference totals are supplied. UBL output passes
@@ -157,6 +173,7 @@ Bugs found while building the matrix, reported to the maintainers with a repro a
 | josemmo/einvoicing 0.3.1 | BT-106 ≠ Σ written BT-131 (BR-CO-10) | [#93](https://github.com/josemmo/einvoicing/issues/93) | Open |
 | speedata/einvoice (≤ v0.0.20) | UBL writer: XSD element order (AllowanceCharge, LegalMonetaryTotal); BT-27/BT-28 swapped (BR-06/BR-07) | [#185](https://github.com/speedata/einvoice/issues/185) | **Fixed ([PR #186](https://github.com/speedata/einvoice/pull/186)), released in [v0.0.23](https://github.com/speedata/einvoice/releases/tag/v0.0.23); re-tested: 9/9 UBL repro invoices KoSIT-acceptable.** The maintainer also fixed related issues #187–#190. |
 | ZUGFeRD-csharp 18.0.1 | CII: required empty `ApplicableHeaderTradeDelivery` dropped when no delivery data (XSD invalid) | [PR #981](https://github.com/stephanstapel/ZUGFeRD-csharp/pull/981) (not ours) | Known, fix PR open; workaround: set BT-72 |
+| node-zugferd 0.1.1-beta.1 | CII: line allowance (BG-27) missing/misplaced `ChargeIndicator` (XSD invalid); generation fails for every cart with a line allowance | [#116](https://github.com/jslno/node-zugferd/issues/116) (not ours) | Known, open |
 | Mustang 2.26.0 | Library-computed totals vs. charged amount | [#1316](https://github.com/ZUGFeRD/mustangproject/issues/1316) | Fixed on master ([PR #1318](https://github.com/ZUGFeRD/mustangproject/pull/1318)), unreleased |
 | horstoeko/zugferd 1.0.132 | Exempt/other VAT categories: broken sprintf / missing VAT-table entry | [#390](https://github.com/horstoeko/zugferd/issues/390) | Released in [v1.0.133](https://github.com/horstoeko/zugferd/releases/tag/v1.0.133) ([7ae8164](https://github.com/horstoeko/zugferd/commit/7ae8164)); re-tested: E/AE/K/G/O exemption reasons KoSIT-acceptable |
 

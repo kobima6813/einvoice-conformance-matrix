@@ -1,16 +1,33 @@
-generator,n_xrechnung,kosit_accept,phive_valid,verdicts_agree,top_phive_rules
-attestwire-en16931-0.14.1-auto-totals-xrechnung-cii,600,600,600,600,
-dealerweb-einvoice1.2.1-auto-totals-xrechnung,600,600,600,600,
-e-invoice-eu3.4.2-xrechnung-cii+ref-totals,600,600,600,600,
-e-invoice-eu3.4.2-xrechnung-ubl+ref-totals,600,600,600,600,
-easybill-zugferd6.0.0-xrechnung+ref-totals,600,600,600,600,
-josemmo0.3.1-xrechnung-default,600,7,7,600,BR-DEC-20:593 UBL-DT-01:593 BR-CO-14:590 BR-CO-15:590
-josemmo0.3.1-xrechnung-round2,600,600,600,600,
-mustang2.26.0-auto-totals-xrechnung,600,600,600,600,
-odoo19-xr-round_globally,600,600,600,600,
-odoo19-xr-round_per_line,600,600,600,600,
-speedata0.0.23-xrechnung-cii,600,600,600,600,
-speedata0.0.23-xrechnung-ubl,600,600,600,600,
-zugferdcs18.0.1-xrechnung-cii+ref-totals,600,0,0,600,TEXT:[SAX] cvc-complex-type.2.4.a: Invalid content was found starting with element '{urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:ApplicableHeaderTradeSettlement}'. One of '{urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:ApplicableHeaderTradeDelivery}' is expected.:600
-zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals,600,600,600,600,
-zugferdcs18.0.1-xrechnung-ubl+ref-totals,600,600,600,600,
+generator,phive_rule_set,n,kosit_no_scenario,kosit_accept,phive_valid,verdicts_agree,top_phive_rules
+attestwire-en16931-0.14.1-auto-totals-xrechnung-cii,xrechnung-3.0.2,600,0,600,600,600,
+dealerweb-einvoice1.2.1-auto-totals-xrechnung,xrechnung-3.0.2,600,0,600,600,600,
+drafthorse2025.2.0-en16931+ref-totals,en16931-1.3.16,600,0,600,600,600,
+e-invoice-eu3.4.2-xrechnung-cii+ref-totals,xrechnung-3.0.2,600,0,600,600,600,
+e-invoice-eu3.4.2-xrechnung-ubl+ref-totals,xrechnung-3.0.2,600,0,600,600,600,
+easybill-zugferd6.0.0-xrechnung+ref-totals,xrechnung-3.0.2,600,0,600,600,600,
+en16931py0.2-peppolbis3-docdiscount,en16931-1.3.16,600,600,0,600,0,
+facturx7.7-fr-en16931+ref-totals,en16931-1.3.16,600,0,600,600,600,
+gobl0.510.0-cii0.80.0-en16931,en16931-1.3.16,600,0,600,600,600,
+gobl0.510.0-ubl0.97.0-peppolbis3,en16931-1.3.16,600,600,0,600,0,
+horstoeko-zugferd1.0.133-en16931+ref-totals,en16931-1.3.16,600,0,600,600,600,
+josemmo0.3.1-xrechnung-default,xrechnung-3.0.2,600,0,7,7,600,BR-DEC-20:593 UBL-DT-01:593 BR-CO-14:590 BR-CO-15:590
+josemmo0.3.1-xrechnung-round2,xrechnung-3.0.2,600,0,600,600,600,
+mustang2.26.0-auto-totals-xrechnung,xrechnung-3.0.2,600,0,600,600,600,
+node-zugferd0.1.1-beta.1-en16931+ref-totals,en16931-1.3.16,298,0,298,298,298,
+numnum2.4.1-peppolbis3+ref-totals,en16931-1.3.16,600,600,0,600,0,
+odoo19-bis3-round_globally,en16931-1.3.16,600,600,0,600,0,
+odoo19-bis3-round_per_line,en16931-1.3.16,600,600,0,600,0,
+odoo19-fx-round_globally,en16931-1.3.16,600,600,0,374,0,BR-S-08:226 BR-CO-10:218
+odoo19-fx-round_per_line,en16931-1.3.16,600,600,0,600,0,
+odoo19-xr-round_globally,xrechnung-3.0.2,600,0,600,600,600,
+odoo19-xr-round_per_line,xrechnung-3.0.2,600,0,600,600,600,
+pycheval0.3.3-en16931+ref-totals,en16931-1.3.16,600,0,600,600,600,
+speedata0.0.23-xrechnung-cii,xrechnung-3.0.2,600,0,600,600,600,
+speedata0.0.23-xrechnung-ubl,xrechnung-3.0.2,600,0,600,600,600,
+wcpdf5164-bis3-rsno,en16931-1.3.16,600,600,0,600,0,
+wcpdf5164-bis3-rsyes,en16931-1.3.16,600,600,0,600,0,
+wcpdf5164-fx-rsno,en16931-1.3.16,600,0,362,362,600,"TEXT:[SAX] cvc-complex-type.2.4.a: Invalid content was found starting with element '{urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:RoundingAmount}'. One of '{urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:TotalPrepaidAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:TotalDiscountAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:TotalAllowanceChargeAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:DuePayableAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:RetailValueExcludingTaxInformationAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:TotalDepositFeeInformationAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:ProductValueExcludingTobaccoTaxInformationAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:TotalRetailValueInformationAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:GrossLineTotalAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:NetLineTotalAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:NetIncludingTaxesLineTotalAmount}' is expected.:238"
+wcpdf5164-fx-rsyes,en16931-1.3.16,600,0,362,362,600,"TEXT:[SAX] cvc-complex-type.2.4.a: Invalid content was found starting with element '{urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:RoundingAmount}'. One of '{urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:TotalPrepaidAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:TotalDiscountAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:TotalAllowanceChargeAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:DuePayableAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:RetailValueExcludingTaxInformationAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:TotalDepositFeeInformationAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:ProductValueExcludingTobaccoTaxInformationAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:TotalRetailValueInformationAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:GrossLineTotalAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:NetLineTotalAmount, urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:NetIncludingTaxesLineTotalAmount}' is expected.:238"
+zugferdcs18.0.1-xrechnung-cii+ref-totals,xrechnung-3.0.2,600,0,0,0,600,TEXT:[SAX] cvc-complex-type.2.4.a: Invalid content was found starting with element '{urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:ApplicableHeaderTradeSettlement}'. One of '{urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:ApplicableHeaderTradeDelivery}' is expected.:600
+zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals,xrechnung-3.0.2,600,0,600,600,600,
+zugferdcs18.0.1-xrechnung-ubl+ref-totals,xrechnung-3.0.2,600,0,600,600,600,
