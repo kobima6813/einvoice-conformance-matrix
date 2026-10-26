@@ -1,4 +1,8 @@
 generator,segment,n,kosit_accept_pct,kosit_nomatch_pct,xsd_invalid_pct,cen_calc_fail_pct,peppol_R120_fail_pct,due_ne_order_pct,due_ne_sim_pct
+attestwire-en16931-0.14.1-auto-totals-xrechnung-cii,b2b,300,100.0,0.0,0.0,0.0,0.0,90.7,90.7
+attestwire-en16931-0.14.1-auto-totals-xrechnung-cii,b2c,300,100.0,0.0,0.0,0.0,0.0,66.7,66.7
+dealerweb-einvoice1.2.1-auto-totals-xrechnung,b2b,300,100.0,0.0,0.0,0.0,0.0,90.7,90.7
+dealerweb-einvoice1.2.1-auto-totals-xrechnung,b2c,300,100.0,0.0,0.0,0.0,0.0,66.7,66.7
 drafthorse2025.2.0-en16931+ref-totals,b2b,300,100.0,0.0,0.0,0.0,0.0,0.0,0.0
 drafthorse2025.2.0-en16931+ref-totals,b2c,300,100.0,0.0,0.0,0.0,0.0,0.0,0.0
 easybill-zugferd6.0.0-xrechnung+ref-totals,b2b,300,100.0,0.0,0.0,0.0,0.0,0.0,0.0

@@ -1,4 +1,24 @@
 {
+ "attestwire-en16931-0.14.1-auto-totals-xrechnung-cii": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 472,
+  "due_ne_sim": 472,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
+ "dealerweb-einvoice1.2.1-auto-totals-xrechnung": {
+  "cen_calc_fail": 0,
+  "due_ne_order": 472,
+  "due_ne_sim": 472,
+  "kosit_accept": 600,
+  "kosit_nomatch": 0,
+  "n": 600,
+  "peppol_R120_fail": 0,
+  "xsd_invalid": 0
+ },
  "drafthorse2025.2.0-en16931+ref-totals": {
   "cen_calc_fail": 0,
   "due_ne_order": 0,

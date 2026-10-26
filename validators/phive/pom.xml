@@ -1,0 +1,9 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"><modelVersion>4.0.0</modelVersion>
+  <groupId>local.eicm</groupId><artifactId>phive-runner</artifactId><version>1</version>
+  <properties><maven.compiler.release>17</maven.compiler.release><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding></properties>
+  <dependencies>
+    <dependency><groupId>com.helger.phive.rules</groupId><artifactId>phive-rules-xrechnung</artifactId><version>4.6.3</version></dependency>
+    <dependency><groupId>org.glassfish.jaxb</groupId><artifactId>jaxb-runtime</artifactId><version>4.0.5</version></dependency>
+    <dependency><groupId>org.slf4j</groupId><artifactId>slf4j-nop</artifactId><version>2.0.16</version></dependency>
+  </dependencies>
+</project>

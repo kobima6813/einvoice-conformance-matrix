@@ -11,3 +11,6 @@ __pycache__/
 generators/*/bin/
 generators/*/obj/
 work_fr/
+generators/*/node_modules/
+validators/phive/target/
+validators/phive/cp.txt

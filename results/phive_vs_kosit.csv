@@ -1,0 +1,14 @@
+generator,n_xrechnung,kosit_accept,phive_valid,verdicts_agree,top_phive_rules
+attestwire-en16931-0.14.1-auto-totals-xrechnung-cii,600,600,600,600,
+dealerweb-einvoice1.2.1-auto-totals-xrechnung,600,600,600,600,
+easybill-zugferd6.0.0-xrechnung+ref-totals,600,600,600,600,
+josemmo0.3.1-xrechnung-default,600,7,7,600,BR-DEC-20:593 UBL-DT-01:593 BR-CO-14:590 BR-CO-15:590
+josemmo0.3.1-xrechnung-round2,600,600,600,600,
+mustang2.26.0-auto-totals-xrechnung,600,600,600,600,
+odoo19-xr-round_globally,600,600,600,600,
+odoo19-xr-round_per_line,600,600,600,600,
+speedata0.0.23-xrechnung-cii,600,600,600,600,
+speedata0.0.23-xrechnung-ubl,600,600,600,600,
+zugferdcs18.0.1-xrechnung-cii+ref-totals,600,0,0,600,TEXT:[SAX] cvc-complex-type.2.4.a: Invalid content was found starting with element '{urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:ApplicableHeaderTradeSettlement}'. One of '{urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:100:ApplicableHeaderTradeDelivery}' is expected.:600
+zugferdcs18.0.1-xrechnung-cii-deliverydate+ref-totals,600,600,600,600,
+zugferdcs18.0.1-xrechnung-ubl+ref-totals,600,600,600,600,

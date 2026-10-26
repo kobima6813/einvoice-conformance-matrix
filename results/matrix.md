@@ -1,5 +1,9 @@
 | generator / config | seg | n | KoSIT accept % | no KoSIT scenario % | XSD invalid % | CEN calc fail % | Peppol R120 fail % | due ≠ order total % | due ≠ simulated charge % |
 |---|---|---|---|---|---|---|---|---|---|
+| attestwire-en16931-0.14.1-auto-totals-xrechnung-cii | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 90.7 | 90.7 |
+| attestwire-en16931-0.14.1-auto-totals-xrechnung-cii | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
+| dealerweb-einvoice1.2.1-auto-totals-xrechnung | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 90.7 | 90.7 |
+| dealerweb-einvoice1.2.1-auto-totals-xrechnung | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 66.7 | 66.7 |
 | drafthorse2025.2.0-en16931+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | drafthorse2025.2.0-en16931+ref-totals | b2c | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
 | easybill-zugferd6.0.0-xrechnung+ref-totals | b2b | 300 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |

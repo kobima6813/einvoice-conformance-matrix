@@ -31,7 +31,7 @@ All validator artefacts are downloaded at runtime from their official sources an
 > The corpus is **synthetic**: 600 generated tax-inclusive carts. No real orders, customers or personal data
 > are included. All names, addresses, VAT IDs and IBANs in the invoices are placeholder/test values.
 
-## Headline matrix (16,200 invoices)
+## Headline matrix (17,400 invoices)
 
 300 B2B + 300 B2C carts per generator configuration (German VAT 19 % / 7 %, percentage coupons, shipping).
 
@@ -55,9 +55,13 @@ All validator artefacts are downloaded at runtime from their official sources an
 | josemmo/einvoicing 0.3.1, library default rounding (no preset) | b2b / b2c | 0.7–1.7 | 0 | 0 | **98.0–98.7** | 0 | **99.3–99.7** |
 | speedata/einvoice 0.0.23, VAT breakdown + totals computed by the library (XRechnung CII and UBL) | b2b | 100 | 0 | 0 | 0 | 0 | **90.7** |
 | speedata/einvoice 0.0.23, VAT breakdown + totals computed by the library (XRechnung CII and UBL) | b2c | 100 | 0 | 0 | 0 | 0 | **66.7** |
-| ZUGFeRD-csharp 18.0.1, XRechnung UBL, reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
-| ZUGFeRD-csharp 18.0.1, XRechnung CII, no delivery date set | b2b / b2c | 0 | 0 | **100** | 0 | 0 | 0 |
-| ZUGFeRD-csharp 18.0.1, XRechnung CII, delivery date (BT-72) set | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
+| @attestwire/en16931 0.14.1, totals computed by the library (XRechnung CII) | b2b | 100 | 0 | 0 | 0 | 0 | **90.7** |
+| @attestwire/en16931 0.14.1, totals computed by the library (XRechnung CII) | b2c | 100 | 0 | 0 | 0 | 0 | **66.7** |
+| dealerweb/einvoice 1.2.1, totals computed by the library (XRechnung CII) | b2b | 100 | 0 | 0 | 0 | 0 | **90.7** |
+| dealerweb/einvoice 1.2.1, totals computed by the library (XRechnung CII) | b2c | 100 | 0 | 0 | 0 | 0 | **66.7** |
+| ZUGFeRD-csharp 18.0.1, XRechnung UBL, reference totals supplied (maintenance ends 30 Nov 2026) | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
+| ZUGFeRD-csharp 18.0.1, XRechnung CII, no delivery date set (maintenance ends 30 Nov 2026) | b2b / b2c | 0 | 0 | **100** | 0 | 0 | 0 |
+| ZUGFeRD-csharp 18.0.1, XRechnung CII, delivery date (BT-72) set (maintenance ends 30 Nov 2026) | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 | PyCheval 0.3.3, Factur-X EN 16931 (CII), reference totals supplied | b2b / b2c | 100 | 0 | 0 | 0 | 0 | 0 |
 | python-en16931 0.2, Peppol BIS 3 (UBL), totals computed by the library, coupon as document discount | b2b | n/a | 100 | 0 | 0 | 0 | **92.0** |
 | python-en16931 0.2, Peppol BIS 3 (UBL), totals computed by the library, coupon as document discount | b2c | n/a | 100 | 0 | 0 | 0 | **72.7** |
@@ -94,6 +98,15 @@ What the numbers mean:
 * **speedata/einvoice 0.0.23** (added 23 Oct 2026): the integrator sets line net amounts and the library computes the VAT
   breakdown and document totals (`UpdateApplicableTradeTax`, `UpdateTotals`). Every CII and UBL invoice passes KoSIT, CEN and
   Peppol calculation rules. The amount-due gap (90.7 % / 66.7 %) is the same tax-inclusive vs. net gap as Mustang, not a library defect.
+* **@attestwire/en16931 0.14.1** and **dealerweb/einvoice 1.2.1** (added 26 Oct 2026) compute line nets, the VAT breakdown and
+  totals themselves. Both pass every validator on all 600 orders, and their amount due equals Mustang's, speedata's and
+  josemmo's (rounding preset) on every cart: the gap to the shop's charged total comes from EN 16931 line-level rounding of
+  VAT-inclusive shop prices, not from any one library.
+* **Second validator:** every XRechnung invoice in the matrix (7,800 files, 13 configurations) was also checked with
+  [phive-rules](https://github.com/phax/phive-rules) 4.6.3 (XRechnung 3.0.2). Its accept/reject verdict matched KoSIT on all
+  of them, including the rejected ones ([`results/phive_vs_kosit.csv`](results/phive_vs_kosit.csv), `validators/phive/run_phive.sh`).
+* **ZUGFeRD-csharp: end of maintenance.** The maintainer has announced that maintenance ends on **30 November 2026**; from
+  1 December 2026 the NuGet packages are marked deprecated (Legacy) and the repository will be archived.
 * **ZUGFeRD-csharp 18.0.1** (added 23 Oct 2026) computes no document totals, so reference totals are supplied. UBL output passes
   everything. CII output is schema-invalid in 100 % of our invoices when no delivery information is set: the writer drops the empty
   `ram:ApplicableHeaderTradeDelivery`, which the CII XSD requires. This is already known upstream, with an open fix
