@@ -1,0 +1,1 @@
+{ "private": true, "type": "module", "dependencies": { "@e-invoice-eu/core": "3.4.2" } }

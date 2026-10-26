@@ -1,6 +1,8 @@
 generator,n_xrechnung,kosit_accept,phive_valid,verdicts_agree,top_phive_rules
 attestwire-en16931-0.14.1-auto-totals-xrechnung-cii,600,600,600,600,
 dealerweb-einvoice1.2.1-auto-totals-xrechnung,600,600,600,600,
+e-invoice-eu3.4.2-xrechnung-cii+ref-totals,600,600,600,600,
+e-invoice-eu3.4.2-xrechnung-ubl+ref-totals,600,600,600,600,
 easybill-zugferd6.0.0-xrechnung+ref-totals,600,600,600,600,
 josemmo0.3.1-xrechnung-default,600,7,7,600,BR-DEC-20:593 UBL-DT-01:593 BR-CO-14:590 BR-CO-15:590
 josemmo0.3.1-xrechnung-round2,600,600,600,600,
